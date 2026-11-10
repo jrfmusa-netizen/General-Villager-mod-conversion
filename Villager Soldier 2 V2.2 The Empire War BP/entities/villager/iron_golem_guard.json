@@ -1,0 +1,543 @@
+{
+	"format_version": "1.19.50",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "fv:iron_golem_guard",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"can_tame": {
+				"minecraft:tameable": {
+					"probability": 0.5,
+					"tame_items": "emerald",
+					"tame_event": {
+						"event": "minecraft:from_player",
+						"target": "self"
+					}
+				},
+				"minecraft:behavior.defend_village_target": {
+					"priority": 1,
+					"must_reach": true,
+					"attack_chance": 0.05,
+					"entity_types": {
+						"filters": {
+							"any_of": [
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "mob"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "player"
+								}
+							]
+						}
+					}
+				},
+				"minecraft:dweller": {
+					"dwelling_type": "village",
+					"dweller_role": "defender",
+					"update_interval_base": 60,
+					"update_interval_variant": 40,
+					"can_find_poi": false,
+					"can_migrate": true,
+					"first_founding_reward": 0
+				},
+				"minecraft:behavior.hurt_by_target": {
+					"priority": 2,
+					"entity_types": {
+						"filters": {
+							"all_of": [
+								{
+									"test": "is_family",
+									"subject": "other",
+									"operator": "!=",
+									"value": "irongolem"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"operator": "!=",
+									"value": "player"
+								}
+							]
+						}
+					}
+				}
+			},
+			"minecraft:player_created": {
+				"minecraft:behavior.hurt_by_target": {
+					"priority": 2,
+					"entity_types": {
+						"filters": {
+							"all_of": [
+								{
+									"all_of": [
+										{
+											"test": "is_family",
+											"subject": "other",
+											"value": "player"
+										},
+										{
+											"test": "is_owner",
+											"subject": "other",
+											"value": false
+										}
+									]
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"operator": "!=",
+									"value": "irongolem"
+								}
+							]
+						}
+					}
+				},
+				"minecraft:behavior.owner_hurt_by_target": {
+					"priority": 0
+				},
+				"minecraft:behavior.owner_hurt_target": {
+					"priority": 1
+				},
+				"minecraft:sittable": {
+					"sit_event": {
+						"event": "no_follow",
+						"target": "self"
+					},
+					"stand_event": {
+						"event": "following",
+						"target": "self"
+					}
+				},
+				"minecraft:behavior.follow_owner": {
+					"priority": 3,
+					"can_teleport": true,
+					"ignore_vibration": true,
+					"max_distance": 60,
+					"speed_multiplier": 0.9,
+					"start_distance": 10,
+					"stop_distance": 3
+				}
+			},
+			"attack_player": {
+				"minecraft:is_sheared": {}
+			},
+			"no_follow": {
+				"minecraft:behavior.go_home": {
+					"priority": 5,
+					"calculate_new_path_radius": 2,
+					"goal_radius": 0.5,
+					"interval": 129,
+					"speed_multiplier": 0.9
+				}
+			}
+		},
+		"components": {
+			"minecraft:home": {},
+			"minecraft:is_hidden_when_invisible": {},
+			"minecraft:type_family": {
+				"family": [
+					"irongolem",
+					"mob"
+				]
+			},
+			"minecraft:variant": {
+				"value": 0
+			},
+			"minecraft:nameable": {},
+			"minecraft:collision_box": {
+				"width": 0.6,
+				"height": 1.9
+			},
+			"minecraft:loot": {
+				"table": "loot_tables/entities/iron_golem_tamed.json"
+			},
+			"minecraft:health": {
+				"value": 80,
+				"max": 80
+			},
+			"minecraft:hurt_on_condition": {
+				"damage_conditions": [
+					{
+						"filters": {
+							"test": "in_lava",
+							"subject": "self",
+							"operator": "==",
+							"value": true
+						},
+						"cause": "lava",
+						"damage_per_tick": 4
+					}
+				]
+			},
+			"minecraft:movement": {
+				"value": 0.35
+			},
+			"minecraft:navigation.walk": {
+				"can_path_over_water": false,
+				"avoid_water": true,
+				"avoid_damage_blocks": true
+			},
+			"minecraft:movement.basic": {},
+			"minecraft:jump.static": {},
+			"minecraft:can_climb": {},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "iron_ingot"
+									},
+									{
+										"test": "is_missing_health",
+										"value": true
+									}
+								]
+							}
+						},
+						"use_item": true,
+						"health_amount": 25,
+						"play_sounds": "irongolem.repair",
+						"interact_text": "action.interact.repair"
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "is_owner",
+										"subject": "other",
+										"value": true
+									},
+									{
+										"test": "has_component",
+										"subject": "self",
+										"operator": "!=",
+										"value": "minecraft:is_sheared"
+									},
+									{
+										"test": "is_sneaking",
+										"subject": "other",
+										"value": true
+									}
+								]
+							},
+							"event": "attack_player",
+							"target": "self"
+						},
+						"play_sounds": "irongolem.repair",
+						"interact_text": "attack player on"
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "is_owner",
+										"subject": "other",
+										"value": true
+									},
+									{
+										"test": "has_component",
+										"subject": "self",
+										"operator": "==",
+										"value": "minecraft:is_sheared"
+									},
+									{
+										"test": "is_sneaking",
+										"subject": "other",
+										"value": true
+									}
+								]
+							},
+							"event": "none_attack_player",
+							"target": "self"
+						},
+						"play_sounds": "irongolem.repair",
+						"interact_text": "attack player off"
+					}
+				]
+			},
+			"minecraft:attack": {
+				"damage": 20
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "fall",
+						"deals_damage": false
+					},
+					{
+						"on_damage": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "irongolem"
+									},
+									{
+										"test": "has_component",
+										"subject": "self",
+										"operator": "!=",
+										"value": "minecraft:is_tamed"
+									}
+								]
+							}
+						},
+						"deals_damage": false
+					},
+					{
+						"on_damage": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "is_owner",
+										"subject": "other",
+										"value": true
+									},
+									{
+										"test": "has_component",
+										"subject": "self",
+										"operator": "==",
+										"value": "minecraft:is_tamed"
+									}
+								]
+							}
+						},
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:leashable": {
+				"soft_distance": 4,
+				"hard_distance": 6,
+				"max_distance": 10
+			},
+			"minecraft:balloonable": {
+				"mass": 2
+			},
+			"minecraft:behavior.delayed_attack": {
+				"priority": 1,
+				"attack_duration": 0.75,
+				"hit_delay_pct": 0.54,
+				"cooldown_time": 1,
+				"reach_multiplier": 3.5
+			},
+			"minecraft:behavior.move_towards_target": {
+				"priority": 2,
+				"speed_multiplier": 0.9,
+				"within_radius": 32
+			},
+			"minecraft:behavior.nearest_attackable_target": {
+				"priority": 3,
+				"must_reach": true,
+				"must_see": true,
+				"entity_types": [
+					{
+						"filters": {
+							"all_of": [
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "monster"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"operator": "!=",
+									"value": "creeper"
+								}
+							]
+						},
+						"within_default": 20
+					},
+					{
+						"filters": {
+							"all_of": [
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "player"
+								},
+								{
+									"test": "is_owner",
+									"subject": "other",
+									"value": false
+								},
+								{
+									"test": "has_component",
+									"subject": "self",
+									"operator": "==",
+									"value": "minecraft:is_sheared"
+								}
+							]
+						},
+						"within_default": 20,
+						"must_see": false
+					},
+					{
+						"filters": {
+							"all_of": [
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "hoglin"
+								},
+								{
+									"test": "is_difficulty",
+									"operator": "!=",
+									"value": "peaceful"
+								}
+							]
+						},
+						"max_dist": 20
+					},
+					{
+						"filters": {
+							"all_of": [
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "zoglin"
+								},
+								{
+									"test": "is_difficulty",
+									"operator": "!=",
+									"value": "peaceful"
+								}
+							]
+						},
+						"max_dist": 20
+					}
+				]
+			},
+			"minecraft:behavior.hurt_by_target": {
+				"priority": 2,
+				"entity_types": {
+					"filters": {
+						"all_of": [
+							{
+								"test": "is_family",
+								"subject": "other",
+								"operator": "!=",
+								"value": "irongolem"
+							}
+						]
+					}
+				}
+			},
+			"minecraft:persistent": {},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": true,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:follow_range": {
+				"value": 64
+			},
+			"minecraft:conditional_bandwidth_optimization": {}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"can_tame",
+								"no_follow"
+							]
+						}
+					},
+					{
+						"filters": {
+							"test": "is_family",
+							"subject": "other",
+							"value": "summoner"
+						},
+						"add": {
+							"component_groups": [
+								"no_follow"
+							]
+						}
+					}
+				]
+			},
+			"minecraft:from_player": {
+				"add": {
+					"component_groups": [
+						"minecraft:player_created",
+						"no_follow"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"can_tame"
+					]
+				}
+			},
+			"attack_player": {
+				"add": {
+					"component_groups": [
+						"attack_player"
+					]
+				}
+			},
+			"none_attack_player": {
+				"remove": {
+					"component_groups": [
+						"attack_player"
+					]
+				}
+			},
+			"following": {
+				"remove": {
+					"component_groups": [
+						"no_follow"
+					]
+				}
+			},
+			"no_follow": {
+				"add": {
+					"component_groups": [
+						"no_follow"
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,85 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "fv:barrel_boom",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"runtime_identifier": "snowball"
+		},
+		"component_groups": {
+			"explode": {
+				"minecraft:explode": {
+					"power": 5,
+					"fuse_lit": true,
+					"fuse_length": {
+						"range_min": 0,
+						"range_max": 0
+					},
+					"breaks_blocks": false,
+					"causes_fire": false
+				}
+			}
+		},
+		"components": {
+			"minecraft:collision_box": {
+				"width": 1,
+				"height": 1
+			},
+			"minecraft:projectile": {
+				"on_hit": {
+					"impact_damage": {
+						"damage": [
+							15,
+							20
+						]
+					},
+					"stick_in_ground": {
+						"shake_time": 0.35
+					},
+					"definition_event": {
+						"affect_projectile": true,
+						"event_trigger": {
+							"event": "explode",
+							"target": "self"
+						}
+					}
+				},
+				"hit_sound": "ambient",
+				"power": 3,
+				"gravity": 0.05,
+				"uncertainty_base": 16,
+				"uncertainty_multiplier": 8,
+				"anchor": 0,
+				"angle_offset": 180,
+				"offset": [
+					0,
+					50,
+					0
+				]
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": true,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:conditional_bandwidth_optimization": {
+				"default_values": {
+					"max_optimized_distance": 100,
+					"max_dropped_ticks": 7,
+					"use_motion_prediction_hints": true
+				}
+			}
+		},
+		"events": {
+			"explode": {
+				"add": {
+					"component_groups": [
+						"explode"
+					]
+				}
+			}
+		}
+	}
+}

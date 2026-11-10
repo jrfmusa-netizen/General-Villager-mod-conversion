@@ -1,0 +1,299 @@
+{
+	"format_version": "1.18.30",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "fv:stonestride",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"zoglin_adult": {
+				"minecraft:type_family": {
+					"family": [
+						"irongolem",
+						"stonestride",
+						"mob"
+					]
+				},
+				"minecraft:collision_box": {
+					"width": 1.1,
+					"height": 1.6
+				},
+				"minecraft:custom_hit_test": {
+					"hitboxes": [
+						{
+							"width": 2,
+							"height": 2,
+							"pivot": [
+								0,
+								1,
+								0
+							]
+						}
+					]
+				},
+				"minecraft:behavior.hurt_by_target": {
+					"priority": 1,
+					"entity_types": {
+						"filters": {
+							"all_of": [
+								{
+									"test": "is_family",
+									"subject": "other",
+									"operator": "!=",
+									"value": "player"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"operator": "!=",
+									"value": "irongolem"
+								}
+							]
+						},
+						"max_dist": 64
+					}
+				},
+				"minecraft:attack": {
+					"damage": [
+						6,
+						12
+					]
+				},
+				"minecraft:rideable": {
+					"controlling_seat": 1,
+					"family_types": [
+						"crossbowman",
+						"archer",
+						"watcher"
+					],
+					"pull_in_entities": true,
+					"seat_count": 2,
+					"seats": [
+						{
+							"position": [
+								0,
+								1,
+								0.3
+							],
+							"lock_rider_rotation": 335
+						},
+						{
+							"position": [
+								0,
+								1,
+								-0.5
+							],
+							"lock_rider_rotation": 335
+						}
+					]
+				}
+			}
+		},
+		"components": {
+			"minecraft:is_hidden_when_invisible": {},
+			"minecraft:nameable": {},
+			"minecraft:loot": {
+				"table": "loot_tables/stonestride_drop.json"
+			},
+			"minecraft:health": {
+				"value": 120,
+				"max": 120
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:behavior.melee_attack": {
+				"priority": 4,
+				"reach_multiplier": 2.15,
+				"cooldown_time": 1
+			},
+			"minecraft:behavior.nearest_attackable_target": {
+				"priority": 3,
+				"must_reach": true,
+				"must_see": true,
+				"entity_types": [
+					{
+						"filters": {
+							"all_of": [
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "monster"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"operator": "!=",
+									"value": "creeper"
+								}
+							]
+						},
+						"within_default": 20
+					},
+					{
+						"filters": {
+							"all_of": [
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "player"
+								},
+								{
+									"test": "is_owner",
+									"subject": "other",
+									"value": false
+								},
+								{
+									"test": "has_component",
+									"subject": "self",
+									"operator": "==",
+									"value": "minecraft:is_sheared"
+								}
+							]
+						},
+						"within_default": 20,
+						"must_see": false
+					},
+					{
+						"filters": {
+							"all_of": [
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "hoglin"
+								},
+								{
+									"test": "is_difficulty",
+									"operator": "!=",
+									"value": "peaceful"
+								}
+							]
+						},
+						"max_dist": 20
+					},
+					{
+						"filters": {
+							"all_of": [
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "zoglin"
+								},
+								{
+									"test": "is_difficulty",
+									"operator": "!=",
+									"value": "peaceful"
+								}
+							]
+						},
+						"max_dist": 20
+					}
+				]
+			},
+			"minecraft:breathable": {
+				"total_supply": 15,
+				"suffocate_time": 0,
+				"breathes_water": true
+			},
+			"minecraft:movement": {
+				"value": 0.12
+			},
+			"minecraft:navigation.walk": {
+				"is_amphibious": true,
+				"can_path_over_water": false,
+				"avoid_water": true,
+				"avoid_damage_blocks": true
+			},
+			"minecraft:movement.basic": {},
+			"minecraft:behavior.move_towards_target": {
+				"priority": 5,
+				"speed_multiplier": 1.6,
+				"within_radius": 6
+			},
+			"minecraft:jump.static": {},
+			"minecraft:can_climb": {},
+			"minecraft:behavior.float": {
+				"priority": 0
+			},
+			"minecraft:leashable": {
+				"soft_distance": 4,
+				"hard_distance": 6,
+				"max_distance": 10
+			},
+			"minecraft:balloonable": {},
+			"minecraft:behavior.random_stroll": {
+				"priority": 7,
+				"speed_multiplier": 1
+			},
+			"minecraft:behavior.random_look_around": {
+				"priority": 9
+			},
+			"minecraft:behavior.look_at_player": {
+				"priority": 8,
+				"look_distance": 6,
+				"probability": 0.02
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": true,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"on_damage": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "irongolem"
+									}
+								]
+							}
+						},
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:conditional_bandwidth_optimization": {},
+			"minecraft:behavior.move_to_village": {
+				"cooldown_time": 2,
+				"goal_radius": 1,
+				"priority": 6,
+				"speed_multiplier": 1.5
+			},
+			"minecraft:follow_range": {
+				"value": 64
+			},
+			"minecraft:behavior.tempt": {
+				"priority": 1,
+				"speed_multiplier": 1.2,
+				"items": [
+					"banner"
+				]
+			},
+			"minecraft:scale": {
+				"value": 1.4
+			}
+		},
+		"events": {
+			"minecraft:entity_transformed": {
+				"add": {
+					"component_groups": [
+						"zoglin_adult"
+					]
+				}
+			},
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"zoglin_adult"
+					]
+				}
+			}
+		}
+	}
+}

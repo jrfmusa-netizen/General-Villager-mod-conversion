@@ -1,0 +1,291 @@
+{
+	"format_version": "1.18.20",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "fv:bamboo_turret",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"alert_for_attack_targets": {
+				"minecraft:behavior.nearest_attackable_target": {
+					"priority": 2,
+					"must_see": true,
+					"reselect_targets": true,
+					"within_radius": 40,
+					"entity_types": [
+						{
+							"filters": {
+								"any_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "monster"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "illager"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "undead"
+									}
+								]
+							},
+							"max_dist": 40
+						},
+						{
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "piglin"
+									},
+									{
+										"test": "has_component",
+										"subject": "other",
+										"operator": "!=",
+										"value": "minecraft:is_baby"
+									}
+								]
+							},
+							"max_dist": 40
+						}
+					]
+				}
+			},
+			"angry": {
+				"minecraft:angry": {
+					"duration": 30,
+					"broadcast_anger": false,
+					"broadcast_anger_on_attack": false,
+					"broadcast_anger_on_being_attacked": true,
+					"broadcast_range": 16,
+					"broadcast_targets": [
+						"irongolem"
+					],
+					"calm_event": {
+						"event": "become_calm_event",
+						"target": "self"
+					},
+					"filters": {
+						"any_of": [
+							{
+								"test": "is_family",
+								"subject": "other",
+								"operator": "!=",
+								"value": "irongolem"
+							},
+							{
+								"test": "is_family",
+								"subject": "other",
+								"operator": "!=",
+								"value": "player"
+							}
+						]
+					},
+					"angry_sound": "angry",
+					"sound_interval": {
+						"range_min": 2,
+						"range_max": 5
+					}
+				}
+			},
+			"minecraft:ranged_attack": {
+				"minecraft:behavior.ranged_attack": {
+					"priority": 4,
+					"attack_interval_min": 1,
+					"attack_interval_max": 1,
+					"burst_interval": 0.3,
+					"burst_shots": 6,
+					"attack_radius": 40
+				},
+				"minecraft:shooter": {
+					"def": "fv:villager_arrow"
+				}
+			}
+		},
+		"components": {
+			"minecraft:is_hidden_when_invisible": {},
+			"minecraft:collision_box": {
+				"width": 0.6,
+				"height": 1.6
+			},
+			"minecraft:type_family": {
+				"family": [
+					"irongolem",
+					"bamboo"
+				]
+			},
+			"minecraft:variant": {
+				"value": 0
+			},
+			"minecraft:conditional_bandwidth_optimization": {},
+			"minecraft:experience_reward": {
+				"on_death": "query.last_hit_by_player?20:0"
+			},
+			"minecraft:on_target_acquired": {
+				"event": "become_angry_event",
+				"target": "self"
+			},
+			"minecraft:breathable": {
+				"total_supply": 15,
+				"suffocate_time": 0
+			},
+			"minecraft:health": {
+				"value": 20,
+				"max": 20
+			},
+			"minecraft:hurt_on_condition": {
+				"damage_conditions": [
+					{
+						"filters": {
+							"test": "in_lava",
+							"subject": "self",
+							"operator": "==",
+							"value": true
+						},
+						"cause": "lava",
+						"damage_per_tick": 4
+					}
+				]
+			},
+			"minecraft:loot": {
+				"table": "loot_tables/bamboo_drop.json"
+			},
+			"minecraft:movement": {
+				"value": 0
+			},
+			"minecraft:navigation.walk": {
+				"can_path_over_water": true,
+				"can_open_doors": true
+			},
+			"minecraft:movement.basic": {},
+			"minecraft:jump.static": {},
+			"minecraft:nameable": {},
+			"minecraft:behavior.hurt_by_target": {
+				"priority": 1,
+				"entity_types": {
+					"filters": {
+						"all_of": [
+							{
+								"test": "is_family",
+								"subject": "other",
+								"operator": "!=",
+								"value": "player"
+							},
+							{
+								"test": "is_family",
+								"subject": "other",
+								"operator": "!=",
+								"value": "irongolem"
+							}
+						]
+					},
+					"max_dist": 64
+				}
+			},
+			"minecraft:behavior.look_at_player": {
+				"priority": 8,
+				"look_distance": 8
+			},
+			"minecraft:behavior.random_look_around": {
+				"priority": 9
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:follow_range": {
+				"value": 64
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"on_damage": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "irongolem"
+									},
+									{
+										"test": "has_component",
+										"subject": "self",
+										"operator": "!=",
+										"value": "minecraft:is_tamed"
+									}
+								]
+							}
+						},
+						"deals_damage": false
+					},
+					{
+						"on_damage": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "is_owner",
+										"subject": "other",
+										"value": true
+									},
+									{
+										"test": "has_component",
+										"subject": "self",
+										"operator": "==",
+										"value": "minecraft:is_tamed"
+									}
+								]
+							}
+						},
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:knockback_resistance": {
+				"value": 10,
+				"max": 10
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"alert_for_attack_targets",
+						"minecraft:ranged_attack"
+					]
+				}
+			},
+			"become_angry_event": {
+				"add": {
+					"component_groups": [
+						"angry"
+					]
+				}
+			},
+			"become_calm_event": {
+				"remove": {
+					"component_groups": [
+						"angry"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"alert_for_attack_targets"
+					]
+				}
+			}
+		}
+	}
+}
