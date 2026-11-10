@@ -1,0 +1,62 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:item": {
+		"description": {
+			"identifier": "flintlock:crossbow",
+			"menu_category": {
+				"category": "equipment"
+			}
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "fv_flintlock"
+			},
+			"minecraft:enchantable": {
+				"slot": "shield",
+				"value": 14
+			},
+			"minecraft:hand_equipped": true,
+			"minecraft:max_stack_size": 1,
+			"minecraft:shooter": {
+				"ammunition": [
+					{
+						"item": "fv:bullet",
+						"search_inventory": true,
+						"use_in_creative": true
+					}
+				],
+				"charge_on_draw": true,
+				"max_draw_duration": 0.7,
+				"launch_power_scale": 1
+			},
+			"minecraft:use_animation": "crossbow",
+			"minecraft:use_duration": 0.7,
+			"minecraft:on_use": {
+				"on_use": {
+					"event": "use"
+				}
+			},
+			"minecraft:durability": {
+				"max_durability": 500,
+				"damage_chance": {
+					"min": 10,
+					"max": 20
+				}
+			}
+		},
+		"events": {
+			"use": {
+				"sequence": [
+					{
+						"condition": "!query.item_is_charged",
+						"run_command": {
+							"command": [
+								"playsound musket.locked @a ~ ~ ~ 20"
+							]
+						}
+					}
+				]
+			}
+		}
+	}
+}

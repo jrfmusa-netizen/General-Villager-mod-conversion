@@ -1,0 +1,20 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:item": {
+		"description": {
+			"identifier": "fv:minecart_shooter",
+			"menu_category": {
+				"category": "equipment"
+			}
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "minecart_shooter"
+			},
+			"minecraft:max_stack_size": 8,
+			"minecraft:entity_placer": {
+				"entity": "fv:minecart_shooter"
+			}
+		}
+	}
+}

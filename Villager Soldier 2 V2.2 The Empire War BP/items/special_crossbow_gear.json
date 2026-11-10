@@ -1,0 +1,36 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:item": {
+		"description": {
+			"identifier": "fv:special_crossbow_gear",
+			"menu_category": {
+				"category": "equipment"
+			}
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "fv_special_crossbow_gear"
+			},
+			"minecraft:max_stack_size": 16,
+			"minecraft:glint": true,
+			"minecraft:stacked_by_data": true,
+			"minecraft:on_use": {
+				"on_use": {
+					"event": "use"
+				}
+			}
+		},
+		"events": {
+			"use": {
+				"run_command": {
+					"command": [
+						"execute if entity @e[family=becomespecial,family=crossbowman,c=1,r=4] run event entity @e[family=becomespecial,family=crossbowman,c=1,r=4] become_special",
+						"execute if entity @e[family=becomespecial,family=crossbowman,c=1,r=4] run playsound beacon.activate @a ~ ~ ~ 2",
+						"execute if entity @e[family=becomespecial,family=crossbowman,c=1,r=4] run clear @s fv:special_crossbow_gear 0 1",
+						"execute unless entity @e[family=becomespecial,family=crossbowman,r=4] run title @s actionbar You need to stay near a crossbowman elite or royal soldier"
+					]
+				}
+			}
+		}
+	}
+}

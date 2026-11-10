@@ -1,0 +1,137 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "fv:velocithief_blade_v3",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.sword"
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:hand_equipped": true,
+			"minecraft:durability": {
+				"max_durability": 5000
+			},
+			"minecraft:damage": 20,
+			"minecraft:icon": {
+				"texture": "fv_desert_sword_v3"
+			},
+			"minecraft:foil": true,
+			"minecraft:enchantable": {
+				"value": 14,
+				"slot": "sword"
+			},
+			"minecraft:can_destroy_in_creative": false,
+			"minecraft:digger": {
+				"use_efficiency": true,
+				"destroy_speeds": [
+					{
+						"block": "minecraft:web",
+						"speed": 12
+					},
+					{
+						"block": "minecraft:bamboo",
+						"speed": 8
+					}
+				]
+			},
+			"minecraft:weapon": {
+				"on_hurt_entity": {
+					"event": "on_hurt_entity",
+					"target": "self"
+				}
+			},
+			"tag:minecraft:is_sword": {},
+			"minecraft:render_offsets": {
+				"main_hand": {
+					"third_person": {
+						"scale": [
+							0.05,
+							0.05,
+							0.05
+						]
+					},
+					"first_person": {
+						"scale": [
+							0.018999999999988602,
+							0.018999999999988602,
+							0.018999999999988602
+						]
+					}
+				},
+				"off_hand": {
+					"third_person": {
+						"scale": [
+							0.05,
+							0.05,
+							0.05
+						]
+					},
+					"first_person": {
+						"scale": [
+							0.018999999999988602,
+							0.018999999999988602,
+							0.018999999999988602
+						]
+					}
+				}
+			},
+			"minecraft:hover_text_color": "green"
+		},
+		"events": {
+			"on_hurt_entity": {
+				"sequence": [
+					{
+						"add_mob_effect": {
+							"effect": "speed",
+							"target": "self",
+							"duration": 10,
+							"amplifier": 1
+						}
+					},
+					{
+						"randomize": [
+							{
+								"weight": 80
+							},
+							{
+								"weight": 20,
+								"add_mob_effect": {
+									"effect": "absorption",
+									"target": "self",
+									"duration": 10,
+									"amplifier": 0
+								}
+							}
+						]
+					},
+					{
+						"add_mob_effect": {
+							"effect": "slowness",
+							"target": "other",
+							"duration": 5,
+							"amplifier": 2
+						}
+					},
+					{
+						"add_mob_effect": {
+							"effect": "poison",
+							"target": "other",
+							"duration": 10,
+							"amplifier": 2
+						}
+					},
+					{
+						"damage": {
+							"amount": 1,
+							"target": "self",
+							"type": "none"
+						}
+					}
+				]
+			}
+		}
+	}
+}

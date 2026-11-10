@@ -1,0 +1,112 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:item": {
+		"description": {
+			"identifier": "fv:steel_big_sword",
+			"menu_category": {
+				"category": "equipment",
+				"group": "itemGroup.name.sword"
+			}
+		},
+		"components": {
+			"minecraft:can_destroy_in_creative": false,
+			"minecraft:durability": {
+				"max_durability": 2500
+			},
+			"minecraft:damage": 9,
+			"minecraft:digger": {
+				"use_efficiency": true,
+				"destroy_speeds": [
+					{
+						"block": "minecraft:web",
+						"speed": 15
+					},
+					{
+						"block": "minecraft:bamboo",
+						"speed": 60
+					}
+				]
+			},
+			"minecraft:enchantable": {
+				"value": 14,
+				"slot": "sword"
+			},
+			"minecraft:hand_equipped": true,
+			"minecraft:icon": {
+				"texture": "fv_steel_big_sword"
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:repairable": {
+				"repair_items": [
+					{
+						"items": [
+							"fv:steel_ingot"
+						],
+						"repair_amount": "query.max_durability*0.25"
+					},
+					{
+						"items": [
+							"fv:steel_big_sword"
+						],
+						"repair_amount": "context.other->query.remaining_durability+0.12*context.other->query.max_durability"
+					}
+				]
+			},
+			"minecraft:weapon": {
+				"on_hurt_entity": {
+					"event": "damaged"
+				}
+			},
+			"tag:minecraft:is_sword": {},
+			"tag:minecraft:is_tool": {}
+		},
+		"events": {
+			"damaged": {
+				"sequence": [
+					{
+						"damage": {
+							"type": "none",
+							"amount": 1,
+							"target": "self"
+						}
+					},
+					{
+						"add_mob_effect": {
+							"effect": "slowness",
+							"amplifier": 0,
+							"duration": 1,
+							"target": "holder"
+						}
+					},
+					{
+						"randomize": [
+							{
+								"weight": 85
+							},
+							{
+								"weight": 15,
+								"damage": {
+									"amount": 19,
+									"target": "other",
+									"type": "entity_attack"
+								},
+								"run_command": {
+									"command": [
+										"playsound hit.bonus @a ~ ~ ~ 10"
+									]
+								}
+							}
+						]
+					}
+				]
+			},
+			"on_tool_used": {
+				"damage": {
+					"type": "none",
+					"amount": 2,
+					"target": "self"
+				}
+			}
+		}
+	}
+}

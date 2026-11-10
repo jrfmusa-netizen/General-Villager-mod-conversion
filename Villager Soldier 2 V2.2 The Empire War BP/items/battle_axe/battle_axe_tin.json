@@ -1,0 +1,115 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:item": {
+		"description": {
+			"identifier": "fv:battle_axe_tin",
+			"menu_category": {
+				"category": "equipment",
+				"group": "itemGroup.name.axe"
+			}
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:hand_equipped": true,
+			"minecraft:durability": {
+				"max_durability": 300
+			},
+			"minecraft:damage": 6,
+			"minecraft:enchantable": {
+				"value": 14,
+				"slot": "sword"
+			},
+			"minecraft:use_on": {
+				"blocks": [
+					"log",
+					"log2",
+					"wood"
+				]
+			},
+			"minecraft:digger": {
+				"use_efficiency": true,
+				"destroy_speeds": [
+					{
+						"block": {
+							"tags": "query.any_tag('wood', 'pumpkin', 'plant')"
+						},
+						"speed": 7
+					},
+					{
+						"block": "minecraft:chest",
+						"speed": 7
+					},
+					{
+						"block": "minecraft:melon_block",
+						"speed": 7
+					}
+				]
+			},
+			"minecraft:icon": {
+				"texture": "fv_battle_axe_tin"
+			},
+			"tag:minecraft:is_axe": {},
+			"minecraft:weapon": {
+				"on_hurt_entity": {
+					"event": "hurt"
+				}
+			},
+			"minecraft:repairable": {
+				"repair_items": [
+					{
+						"items": [
+							"fv:tin_ingot"
+						],
+						"repair_amount": "query.max_durability*0.25"
+					},
+					{
+						"items": [
+							"fv:battle_axe_tin"
+						],
+						"repair_amount": "context.other->query.remaining_durability+0.12*context.other->query.max_durability"
+					}
+				]
+			}
+		},
+		"events": {
+			"hurt": {
+				"sequence": [
+					{
+						"randomize": [
+							{
+								"weight": 90
+							},
+							{
+								"weight": 10,
+								"damage": {
+									"amount": 12,
+									"target": "other",
+									"type": "entity_attack"
+								},
+								"run_command": {
+									"command": [
+										"playsound hit.bonus @a ~ ~ ~ 20"
+									]
+								}
+							}
+						]
+					},
+					{
+						"damage": {
+							"amount": 1,
+							"target": "self",
+							"type": "none"
+						}
+					}
+				]
+			},
+			"damaged": {
+				"damage": {
+					"amount": 1,
+					"target": "self",
+					"type": "none"
+				}
+			}
+		}
+	}
+}

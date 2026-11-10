@@ -1,0 +1,89 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:item": {
+		"description": {
+			"identifier": "fv:commander_totem",
+			"menu_category": {
+				"category": "equipment"
+			}
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "fv_commander_totem"
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:glint": true,
+			"minecraft:on_use": {
+				"on_use": {
+					"event": "used"
+				}
+			},
+			"minecraft:chargeable": {
+				"movement_modifier": 1.5
+			},
+			"minecraft:durability": {
+				"max_durability": 10
+			}
+		},
+		"events": {
+			"used": {
+				"sequence": [
+					{
+						"add_mob_effect": {
+							"effect": "absorption",
+							"amplifier": 4,
+							"duration": 600,
+							"target": "self"
+						}
+					},
+					{
+						"add_mob_effect": {
+							"effect": "regeneration",
+							"amplifier": 5,
+							"duration": 600,
+							"target": "self"
+						}
+					},
+					{
+						"add_mob_effect": {
+							"effect": "fire_resistance",
+							"amplifier": 1,
+							"duration": 600,
+							"target": "self"
+						}
+					},
+					{
+						"add_mob_effect": {
+							"effect": "resistance",
+							"amplifier": 2,
+							"duration": 600,
+							"target": "self"
+						}
+					},
+					{
+						"add_mob_effect": {
+							"effect": "health_boost",
+							"amplifier": 2,
+							"duration": 600,
+							"target": "self"
+						}
+					},
+					{
+						"damage": {
+							"amount": 1,
+							"type": "none",
+							"target": "self"
+						}
+					},
+					{
+						"run_command": {
+							"command": [
+								"playsound random.totem @a ~ ~ ~ 20"
+							]
+						}
+					}
+				]
+			}
+		}
+	}
+}

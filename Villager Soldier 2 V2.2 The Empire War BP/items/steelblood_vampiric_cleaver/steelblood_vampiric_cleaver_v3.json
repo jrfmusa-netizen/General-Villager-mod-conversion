@@ -1,0 +1,99 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:item": {
+		"description": {
+			"identifier": "fv:steelblood_vampiric_cleaver_v3",
+			"menu_category": {
+				"category": "equipment",
+				"group": "itemGroup.name.axe"
+			}
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:hand_equipped": true,
+			"minecraft:durability": {
+				"max_durability": 20000
+			},
+			"minecraft:damage": 20,
+			"minecraft:icon": {
+				"texture": "fv_steelblood_vampiric_cleaver_v3"
+			},
+			"minecraft:enchantable": {
+				"value": 14,
+				"slot": "sword"
+			},
+			"minecraft:can_destroy_in_creative": false,
+			"minecraft:digger": {
+				"use_efficiency": true,
+				"destroy_speeds": [
+					{
+						"block": "minecraft:web",
+						"speed": 12
+					},
+					{
+						"block": "minecraft:bamboo",
+						"speed": 8
+					}
+				]
+			},
+			"minecraft:weapon": {
+				"on_hurt_entity": {
+					"event": "on_hurt_entity",
+					"target": "self"
+				}
+			},
+			"tag:minecraft:is_sword": {},
+			"minecraft:glint": true,
+			"minecraft:hover_text_color": "green"
+		},
+		"events": {
+			"on_hurt_entity": {
+				"sequence": [
+					{
+						"add_mob_effect": {
+							"effect": "regeneration",
+							"target": "self",
+							"duration": 5,
+							"amplifier": 2
+						}
+					},
+					{
+						"add_mob_effect": {
+							"effect": "weakness",
+							"target": "other",
+							"duration": 10,
+							"amplifier": 2
+						}
+					},
+					{
+						"damage": {
+							"amount": 1,
+							"target": "self",
+							"type": "none"
+						}
+					},
+					{
+						"randomize": [
+							{
+								"weight": 85
+							},
+							{
+								"weight": 15,
+								"damage": {
+									"amount": 50,
+									"target": "other",
+									"type": "entity_attack"
+								},
+								"run_command": {
+									"command": [
+										"playsound hit.bonus @a ~ ~ ~ 10"
+									]
+								}
+							}
+						]
+					}
+				]
+			}
+		}
+	}
+}
