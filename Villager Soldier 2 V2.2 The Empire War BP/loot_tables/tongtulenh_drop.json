@@ -1,0 +1,293 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"name": "fv:levelup_scroll",
+					"weight": 60,
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 20,
+								"max": 40
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "fv:captain_scroll",
+					"weight": 30,
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 10,
+								"max": 20
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "fv:guard_medal",
+					"weight": 10,
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 10,
+								"max": 20
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"rolls": {
+				"min": 5,
+				"max": 6
+			},
+			"entries": [
+				{
+					"type": "item",
+					"name": "fv:enchanted_steel_ingot",
+					"weight": 35,
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 10,
+								"max": 20
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "fv:enchanted_ruby",
+					"weight": 25,
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 2,
+								"max": 4
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "fv:enchanted_gold_ingot",
+					"weight": 15,
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 5,
+								"max": 10
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "fv:enchanted_emerald",
+					"weight": 10,
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 2,
+								"max": 4
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "fv:steelblood_vampiric_cleaver_v2",
+					"weight": 2,
+					"functions": [
+						{
+							"function": "enchant_with_levels",
+							"levels": {
+								"min": 30,
+								"max": 50
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "fv:velocithief_blade_v2",
+					"weight": 2,
+					"functions": [
+						{
+							"function": "enchant_with_levels",
+							"levels": {
+								"min": 30,
+								"max": 50
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "fv:netherite_big_sword",
+					"weight": 3,
+					"functions": [
+						{
+							"function": "enchant_with_levels",
+							"levels": {
+								"min": 30,
+								"max": 50
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "fv:netherite_desert_sword",
+					"weight": 5,
+					"functions": [
+						{
+							"function": "enchant_with_levels",
+							"levels": {
+								"min": 30,
+								"max": 50
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "fv:netherite_hammer",
+					"weight": 5,
+					"functions": [
+						{
+							"function": "enchant_with_levels",
+							"levels": {
+								"min": 30,
+								"max": 50
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "fv:netherite_saber",
+					"weight": 5,
+					"functions": [
+						{
+							"function": "enchant_with_levels",
+							"levels": {
+								"min": 30,
+								"max": 50
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "fv:battle_axe_netherite",
+					"weight": 10,
+					"functions": [
+						{
+							"function": "enchant_with_levels",
+							"levels": {
+								"min": 30,
+								"max": 50
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "fv:netherite_spear",
+					"weight": 10,
+					"functions": [
+						{
+							"function": "enchant_with_levels",
+							"levels": {
+								"min": 30,
+								"max": 50
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "fv:netherite_pike",
+					"weight": 10,
+					"functions": [
+						{
+							"function": "enchant_with_levels",
+							"levels": {
+								"min": 30,
+								"max": 50
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "netherite_sword",
+					"weight": 20,
+					"functions": [
+						{
+							"function": "enchant_with_levels",
+							"levels": {
+								"min": 30,
+								"max": 50
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "netherite_axe",
+					"weight": 20,
+					"functions": [
+						{
+							"function": "enchant_with_levels",
+							"levels": {
+								"min": 30,
+								"max": 50
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"name": "fv:special_template",
+					"weight": 95,
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 2,
+								"max": 4
+							}
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "fv:commander_totem",
+					"weight": 5
+				}
+			]
+		}
+	]
+}
