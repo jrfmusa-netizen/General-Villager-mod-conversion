@@ -1,0 +1,84 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.musket.charge": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"charged": "query.is_charged"
+						}
+					]
+				},
+				"charged": {
+					"on_entry": [
+						"/playsound musket.locked @a ~ ~ ~ 50"
+					],
+					"transitions": [
+						{
+							"default": "!query.is_charged"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.cowboy.charge": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"rifle": "query.is_charged&&query.is_item_name_any('slot.weapon.mainhand',0,'rifle:crossbow')"
+						},
+						{
+							"mustket": "query.is_charged&&(query.is_item_name_any('slot.weapon.mainhand',0,'mustket:crossbow')||query.is_item_name_any('slot.weapon.mainhand',0,'flintlock:crossbow'))"
+						}
+					]
+				},
+				"rifle": {
+					"on_entry": [
+						"/playsound rifle.load @a ~ ~ ~ 50"
+					],
+					"transitions": [
+						{
+							"default": "!query.is_charged"
+						}
+					]
+				},
+				"mustket": {
+					"on_entry": [
+						"/playsound musket.locked @a ~ ~ ~ 50"
+					],
+					"transitions": [
+						{
+							"default": "!query.is_charged"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.crossbow.charge": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"charged": "query.is_charged"
+						}
+					]
+				},
+				"charged": {
+					"on_entry": [
+						"/playsound crossbow.loading.middle @a ~ ~ ~ 80"
+					],
+					"transitions": [
+						{
+							"default": "!query.is_charged"
+						}
+					]
+				}
+			}
+		}
+	}
+}

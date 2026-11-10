@@ -1,0 +1,23 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:block": {
+		"description": {
+			"identifier": "fv:lootbox_normal",
+			"menu_category": {
+				"category": "items"
+			}
+		},
+		"components": {
+			"minecraft:collision_box": true,
+			"minecraft:selection_box": true,
+			"minecraft:loot": "loot_tables/lootbox/normal.json",
+			"minecraft:flammable": true,
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 0.5
+			},
+			"minecraft:destructible_by_explosion": true,
+			"minecraft:map_color": "#564000"
+		},
+		"events": {}
+	}
+}

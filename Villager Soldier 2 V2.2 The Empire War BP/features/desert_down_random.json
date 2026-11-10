@@ -1,0 +1,18 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "fv:desert_down_random"
+		},
+		"features": [
+			[
+				"fv:desert_down1",
+				1
+			],
+			[
+				"fv:desert_down2",
+				1
+			]
+		]
+	}
+}

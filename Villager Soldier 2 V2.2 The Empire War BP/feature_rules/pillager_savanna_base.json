@@ -1,0 +1,68 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "fv:pillager_savanna_base",
+			"places_feature": "fv:pillager_savanna_base"
+		},
+		"conditions": {
+			"placement_pass": "after_surface_pass",
+			"minecraft:biome_filter": {
+				"any_of": [
+					{
+						"test": "has_biome_tag",
+						"operator": "==",
+						"value": "savanna"
+					},
+					{
+						"all_of": [
+							{
+								"test": "has_biome_tag",
+								"operator": "==",
+								"value": "savanna"
+							},
+							{
+								"test": "has_biome_tag",
+								"operator": "==",
+								"value": "hills"
+							}
+						]
+					},
+					{
+						"all_of": [
+							{
+								"test": "has_biome_tag",
+								"operator": "==",
+								"value": "savanna"
+							},
+							{
+								"test": "has_biome_tag",
+								"operator": "==",
+								"value": "extreme_hills"
+							}
+						]
+					}
+				]
+			}
+		},
+		"distribution": {
+			"iterations": 1,
+			"scatter_chance": 0.4,
+			"x": {
+				"distribution": "uniform",
+				"extent": [
+					0,
+					16
+				]
+			},
+			"y": "query.heightmap(variable.worldx, variable.worldz) + -1",
+			"z": {
+				"distribution": "uniform",
+				"extent": [
+					0,
+					16
+				]
+			}
+		}
+	}
+}

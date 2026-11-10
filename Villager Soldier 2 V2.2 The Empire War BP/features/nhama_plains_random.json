@@ -1,0 +1,22 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "fv:nhama_plains_random"
+		},
+		"features": [
+			[
+				"fv:nhama_plains",
+				1
+			],
+			[
+				"fv:nhama_plains2",
+				1
+			],
+			[
+				"fv:nhama_plains3",
+				1
+			]
+		]
+	}
+}

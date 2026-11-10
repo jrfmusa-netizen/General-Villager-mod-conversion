@@ -1,0 +1,23 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:block": {
+		"description": {
+			"identifier": "fv:lootbox_iron",
+			"menu_category": {
+				"category": "items"
+			}
+		},
+		"components": {
+			"minecraft:collision_box": true,
+			"minecraft:selection_box": true,
+			"minecraft:loot": "loot_tables/lootbox/good.json",
+			"minecraft:flammable": true,
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 1
+			},
+			"minecraft:destructible_by_explosion": true,
+			"minecraft:map_color": "#67500E"
+		},
+		"events": {}
+	}
+}

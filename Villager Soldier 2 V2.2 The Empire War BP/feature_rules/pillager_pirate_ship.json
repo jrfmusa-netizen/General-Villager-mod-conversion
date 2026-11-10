@@ -1,0 +1,48 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "fv:pillager_pirate_ship",
+			"places_feature": "fv:pillager_pirate_ship"
+		},
+		"conditions": {
+			"placement_pass": "final_pass",
+			"minecraft:biome_filter": {
+				"any_of": [
+					{
+						"test": "has_biome_tag",
+						"operator": "==",
+						"value": "ocean"
+					},
+					{
+						"test": "has_biome_tag",
+						"operator": "==",
+						"value": "warm"
+					}
+				]
+			}
+		},
+		"distribution": {
+			"iterations": 1,
+			"scatter_chance": {
+				"numerator": 1,
+				"denominator": 3000
+			},
+			"x": {
+				"extent": [
+					0,
+					16
+				],
+				"distribution": "fixed_grid"
+			},
+			"y": 61,
+			"z": {
+				"extent": [
+					0,
+					16
+				],
+				"distribution": "fixed_grid"
+			}
+		}
+	}
+}

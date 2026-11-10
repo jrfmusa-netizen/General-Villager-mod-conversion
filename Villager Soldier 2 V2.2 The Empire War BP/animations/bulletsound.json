@@ -1,0 +1,50 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.flintlock.shoot": {
+			"timeline": {
+				"0.0": [
+					"/playsound flintlock.shoot @a ~ ~ ~ 100"
+				],
+				"0.1": []
+			},
+			"animation_length": 0.1
+		},
+		"animation.rifle.shoot": {
+			"timeline": {
+				"0.0": [
+					"/playsound rifle.shoot @a ~ ~ ~ 100"
+				],
+				"0.1": []
+			},
+			"animation_length": 0.1
+		},
+		"animation.musket.shoot": {
+			"timeline": {
+				"0.0": [
+					"/playsound musket.shoot @a ~ ~ ~ 100"
+				],
+				"0.1": []
+			},
+			"animation_length": 0.1
+		},
+		"animation.crossbow.shoot": {
+			"timeline": {
+				"0.0": [
+					"/playsound crossbow.shoot @a ~ ~ ~ 30"
+				],
+				"0.1": []
+			},
+			"animation_length": 0.1
+		},
+		"animation.bow.shoot": {
+			"timeline": {
+				"0.0": [
+					"/playsound random.bow @a ~ ~ ~ 30"
+				],
+				"0.1": []
+			},
+			"animation_length": 0.1
+		}
+	}
+}

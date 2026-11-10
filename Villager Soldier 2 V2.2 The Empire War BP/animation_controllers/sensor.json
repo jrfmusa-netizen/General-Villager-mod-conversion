@@ -1,0 +1,38 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.pickup.item.sensor": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"bow": "query.is_item_name_any('slot.weapon.mainhand',0,'minecraft:bow')"
+						},
+						{
+							"crossbow": "query.is_item_name_any('slot.weapon.mainhand',0,'minecraft:crossbow')"
+						},
+						{
+							"gun": "(query.is_item_name_any('slot.weapon.mainhand',0,'mustket:crossbow')||query.is_item_name_any('slot.weapon.mainhand',0,'pirate:crossbow')||query.is_item_name_any('slot.weapon.mainhand',0,'flintlock:crossbow')||query.is_item_name_any('slot.weapon.mainhand',0,'rifle:crossbow'))"
+						}
+					]
+				},
+				"bow": {
+					"on_entry": [
+						"/event entity @s ranged"
+					]
+				},
+				"crossbow": {
+					"on_entry": [
+						"/event entity @s crossbow"
+					]
+				},
+				"gun": {
+					"on_entry": [
+						"/event entity @s gun"
+					]
+				}
+			}
+		}
+	}
+}

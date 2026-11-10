@@ -1,0 +1,14 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "fv:illager_desert_base"
+		},
+		"structure_name": "mystructure:illager_desert_base",
+		"adjustment_radius": 8,
+		"facing_direction": "random",
+		"constraints": {
+			"grounded": {}
+		}
+	}
+}

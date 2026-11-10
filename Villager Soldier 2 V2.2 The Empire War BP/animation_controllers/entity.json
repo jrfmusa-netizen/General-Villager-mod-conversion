@@ -1,0 +1,90 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.change.mode": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"bow": "query.is_item_name_any('slot.weapon.mainhand',0,'minecraft:bow')"
+						},
+						{
+							"crossbow": "query.is_item_name_any('slot.weapon.mainhand',0,'minecraft:crossbow')"
+						},
+						{
+							"copper_boom": "query.is_item_name_any('slot.weapon.mainhand',0,'fv:copper_boom')"
+						},
+						{
+							"gun": "(query.is_item_name_any('slot.weapon.mainhand',0,'mustket:crossbow')||query.is_item_name_any('slot.weapon.mainhand',0,'pirate:crossbow')||query.is_item_name_any('slot.weapon.mainhand',0,'flintlock:crossbow')||query.is_item_name_any('slot.weapon.mainhand',0,'rifle:crossbow'))"
+						}
+					]
+				},
+				"bow": {
+					"on_entry": [
+						"/event entity @s bow"
+					],
+					"transitions": [
+						{
+							"crossbow": "query.is_item_name_any('slot.weapon.mainhand',0,'minecraft:crossbow')"
+						},
+						{
+							"copper_boom": "query.is_item_name_any('slot.weapon.mainhand',0,'fv:copper_boom')"
+						},
+						{
+							"gun": "(query.is_item_name_any('slot.weapon.mainhand',0,'mustket:crossbow')||query.is_item_name_any('slot.weapon.mainhand',0,'pirate:crossbow')||query.is_item_name_any('slot.weapon.mainhand',0,'flintlock:crossbow')||query.is_item_name_any('slot.weapon.mainhand',0,'rifle:crossbow'))"
+						}
+					]
+				},
+				"crossbow": {
+					"on_entry": [
+						"/event entity @s crossbow"
+					],
+					"transitions": [
+						{
+							"bow": "query.is_item_name_any('slot.weapon.mainhand',0,'minecraft:bow')"
+						},
+						{
+							"copper_boom": "query.is_item_name_any('slot.weapon.mainhand',0,'fv:copper_boom')"
+						},
+						{
+							"gun": "(query.is_item_name_any('slot.weapon.mainhand',0,'mustket:crossbow')||query.is_item_name_any('slot.weapon.mainhand',0,'pirate:crossbow')||query.is_item_name_any('slot.weapon.mainhand',0,'flintlock:crossbow')||query.is_item_name_any('slot.weapon.mainhand',0,'rifle:crossbow'))"
+						}
+					]
+				},
+				"copper_boom": {
+					"on_entry": [
+						"/event entity @s copper_boom"
+					],
+					"transitions": [
+						{
+							"bow": "query.is_item_name_any('slot.weapon.mainhand',0,'minecraft:bow')"
+						},
+						{
+							"crossbow": "query.is_item_name_any('slot.weapon.mainhand',0,'minecraft:crossbow')"
+						},
+						{
+							"gun": "(query.is_item_name_any('slot.weapon.mainhand',0,'mustket:crossbow')||query.is_item_name_any('slot.weapon.mainhand',0,'pirate:crossbow')||query.is_item_name_any('slot.weapon.mainhand',0,'flintlock:crossbow')||query.is_item_name_any('slot.weapon.mainhand',0,'rifle:crossbow'))"
+						}
+					]
+				},
+				"gun": {
+					"on_entry": [
+						"/event entity @s gun"
+					],
+					"transitions": [
+						{
+							"bow": "query.is_item_name_any('slot.weapon.mainhand',0,'minecraft:bow')"
+						},
+						{
+							"crossbow": "query.is_item_name_any('slot.weapon.mainhand',0,'minecraft:crossbow')"
+						},
+						{
+							"copper_boom": "query.is_item_name_any('slot.weapon.mainhand',0,'fv:copper_boom')"
+						}
+					]
+				}
+			}
+		}
+	}
+}
