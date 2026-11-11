@@ -1,0 +1,194 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.trident_boat.default": {
+			"loop": true,
+			"bones": {
+				"crossbow": {
+					"rotation": [
+						-12.5,
+						0,
+						0
+					]
+				},
+				"body": {
+					"position": [
+						0,
+						-4,
+						0
+					]
+				},
+				"leftLeg": {
+					"rotation": [
+						-90,
+						-27.5,
+						0
+					]
+				},
+				"rightLeg": {
+					"rotation": [
+						-90,
+						27.5,
+						0
+					]
+				},
+				"leftArm": {
+					"rotation": [
+						-95.06237,
+						-3.39793,
+						-13.28141
+					]
+				},
+				"rightArm": {
+					"rotation": [
+						-92.65991,
+						6.48223,
+						12.47362
+					]
+				}
+			}
+		},
+		"animation.trident_boat.charged": {
+			"loop": true,
+			"bones": {
+				"muiten": {
+					"position": [
+						0,
+						0,
+						15
+					]
+				},
+				"cungtrai": {
+					"rotation": [
+						0,
+						-10,
+						0
+					]
+				},
+				"canhtrai": {
+					"rotation": [
+						0,
+						-10,
+						0
+					]
+				},
+				"canhtrai2": {
+					"rotation": [
+						0,
+						-15,
+						0
+					]
+				},
+				"daytrai": {
+					"rotation": [
+						0,
+						80,
+						0
+					]
+				},
+				"cungphai": {
+					"rotation": [
+						0,
+						10,
+						0
+					]
+				},
+				"canhphai": {
+					"rotation": [
+						0,
+						10,
+						0
+					]
+				},
+				"canhphai2": {
+					"rotation": [
+						0,
+						15,
+						0
+					]
+				},
+				"dayphai": {
+					"rotation": [
+						0,
+						-80,
+						0
+					]
+				},
+				"daykeo": {
+					"scale": [
+						1,
+						1,
+						0.1
+					]
+				},
+				"trucxoay": {
+					"rotation": [
+						-312.5,
+						0,
+						0
+					]
+				},
+				"chotgiu": {
+					"position": [
+						0,
+						0,
+						15
+					]
+				}
+			}
+		},
+		"animation.trident_boat.target_mode": {
+			"loop": true,
+			"bones": {
+				"leftArm": {
+					"rotation": [
+						-56.44427,
+						15.81499,
+						7.59001
+					],
+					"position": [
+						0,
+						0,
+						-1
+					]
+				},
+				"rightArm": {
+					"rotation": [
+						-56.70612,
+						-16.66577,
+						-5.41615
+					],
+					"position": [
+						0,
+						0,
+						-1
+					]
+				}
+			}
+		},
+		"animation.trident_boat.has_target": {
+			"loop": true,
+			"bones": {
+				"crossbow": {
+					"rotation": [
+						"query.target_x_rotation",
+						0,
+						0
+					]
+				}
+			}
+		},
+		"animation.trident_boat.on_water": {
+			"loop": true,
+			"bones": {
+				"wait": {
+					"position": [
+						0,
+						1,
+						0
+					]
+				}
+			}
+		}
+	}
+}

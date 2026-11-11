@@ -1,0 +1,393 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.pillager.attack": {
+			"initial_state": "default",
+			"states": {
+				"charge": {
+					"animations": [
+						"crossbow_charge"
+					],
+					"transitions": [
+						{
+							"default": "variable.attack_state==0"
+						},
+						{
+							"hold": "variable.attack_state==1"
+						}
+					]
+				},
+				"default": {
+					"transitions": [
+						{
+							"hold": "variable.attack_state==1"
+						},
+						{
+							"charge": "variable.attack_state==2"
+						}
+					]
+				},
+				"hold": {
+					"animations": [
+						"crossbow_hold"
+					],
+					"transitions": [
+						{
+							"default": "variable.attack_state==0"
+						},
+						{
+							"charge": "variable.attack_state==2"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.pillager.root": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"blend_transition": 0.2,
+					"blend_via_shortest_path": true,
+					"animations": [
+						"controller_humanoid_base_pose",
+						"controller_look_at_target",
+						"controller_move",
+						"controller_riding",
+						"controller_attack",
+						"controller_bob",
+						"controller_pillager_attack"
+					],
+					"transitions": [
+						{
+							"celebrating": "query.is_celebrating"
+						}
+					]
+				},
+				"celebrating": {
+					"animations": [
+						"celebrating",
+						{
+							"riding.legs": "query.is_riding"
+						}
+					],
+					"blend_transition": 0.2,
+					"blend_via_shortest_path": true,
+					"transitions": [
+						{
+							"default": "!query.is_celebrating"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.pillager.bow.attack": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"hold": "query.has_target"
+						}
+					]
+				},
+				"hold": {
+					"animations": [
+						"crossbow_hold"
+					],
+					"transitions": [
+						{
+							"default": "!query.has_target"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.illager.delay.attack": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"melee_attack": "query.is_delayed_attacking"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"melee_attack": {
+					"animations": [
+						"melee_attack"
+					],
+					"transitions": [
+						{
+							"default": "query.all_animations_finished"
+						}
+					],
+					"blend_transition": 2,
+					"blend_via_shortest_path": true
+				}
+			}
+		},
+		"controller.animation.ravager.balista.attack": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"charged": "query.is_charged"
+						}
+					],
+					"blend_transition": 3
+				},
+				"charged": {
+					"animations": [
+						"charged"
+					],
+					"transitions": [
+						{
+							"default": "!query.is_charged"
+						}
+					],
+					"blend_transition": 0.1,
+					"blend_via_shortest_path": true
+				}
+			}
+		},
+		"controller.animation.illager.variant.attack": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"melee_attack": "query.is_delayed_attacking&&math.random(0,5)>=3.5"
+						},
+						{
+							"melee_attack2": "query.is_delayed_attacking&&math.random(0,5)<3.5"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"melee_attack": {
+					"animations": [
+						"melee_attack"
+					],
+					"transitions": [
+						{
+							"default": "query.all_animations_finished"
+						}
+					],
+					"blend_transition": 2,
+					"blend_via_shortest_path": true
+				},
+				"melee_attack2": {
+					"animations": [
+						"melee_attack2"
+					],
+					"transitions": [
+						{
+							"default": "query.all_animations_finished"
+						}
+					],
+					"blend_transition": 2,
+					"blend_via_shortest_path": true
+				}
+			}
+		},
+		"controller.animation.camel.illager.move": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"idle"
+					],
+					"transitions": [
+						{
+							"moving": "variable.moving"
+						}
+					],
+					"blend_transition": 0.5
+				},
+				"moving": {
+					"animations": [
+						"move"
+					],
+					"transitions": [
+						{
+							"default": "!variable.moving"
+						}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		},
+		"controller.animation.pirate.root": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"blend_transition": 0.2,
+					"blend_via_shortest_path": true,
+					"animations": [
+						"controller_humanoid_base_pose",
+						"controller_look_at_target",
+						"controller_move",
+						"controller_riding",
+						"controller_attack",
+						"controller_bob",
+						{
+							"controller_pillager_attack": "query.variant==1"
+						},
+						{
+							"melee_attack": "query.variant==2&&variable.attack_time>0"
+						}
+					],
+					"transitions": [
+						{
+							"celebrating": "query.is_celebrating"
+						}
+					]
+				},
+				"celebrating": {
+					"animations": [
+						"celebrating",
+						{
+							"riding.legs": "query.is_riding"
+						}
+					],
+					"blend_transition": 0.2,
+					"blend_via_shortest_path": true,
+					"transitions": [
+						{
+							"default": "!query.is_celebrating"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.gun.attack": {
+			"initial_state": "default",
+			"states": {
+				"charge": {
+					"animations": [
+						"crossbow_charge"
+					],
+					"transitions": [
+						{
+							"default": "variable.attack_state==0"
+						},
+						{
+							"hold": "variable.attack_state==1"
+						}
+					]
+				},
+				"default": {
+					"animations": [
+						{
+							"hold_gun": "query.is_item_name_any('slot.weapon.mainhand',0,'rifle:crossbow')||query.is_item_name_any('slot.weapon.mainhand',0,'mustket:crossbow')"
+						}
+					],
+					"transitions": [
+						{
+							"hold": "variable.attack_state==1"
+						},
+						{
+							"charge": "variable.attack_state==2"
+						}
+					]
+				},
+				"hold": {
+					"animations": [
+						{
+							"crossbow_hold": "query.is_item_name_any('slot.weapon.mainhand',0,'rifle:crossbow')||query.is_item_name_any('slot.weapon.mainhand',0,'mustket:crossbow')"
+						},
+						{
+							"onehand": "query.is_item_name_any('slot.weapon.mainhand',0,'flintlock:crossbow')||query.is_item_name_any('slot.weapon.mainhand',0,'pirate:crossbow')"
+						}
+					],
+					"transitions": [
+						{
+							"default": "variable.attack_state==0"
+						},
+						{
+							"charge": "variable.attack_state==2"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.codaituong.attack": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"giuco"
+					],
+					"transitions": [
+						{
+							"camco": "query.is_casting"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"camco": {
+					"animations": [
+						"camco",
+						"coxuathien"
+					],
+					"transitions": [
+						{
+							"default": "query.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.3
+				}
+			}
+		},
+		"controller.animation.illager.roaring": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"roaring": "query.is_roaring"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"roaring": {
+					"animations": [
+						"roaring"
+					],
+					"transitions": [
+						{
+							"default": "query.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.3
+				}
+			}
+		},
+		"controller.animation.cape.running": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"caperun": "query.modified_move_speed>=0.2"
+						}
+					],
+					"blend_transition": 1
+				},
+				"caperun": {
+					"animations": [
+						"caperun"
+					],
+					"transitions": [
+						{
+							"default": "query.modified_move_speed<0.2"
+						}
+					],
+					"blend_transition": 0.8
+				}
+			}
+		}
+	}
+}

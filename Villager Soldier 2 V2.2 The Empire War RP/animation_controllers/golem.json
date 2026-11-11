@@ -1,0 +1,159 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.melon.golem.attack": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"blend_transition": 0.3,
+					"transitions": [
+						{
+							"attack": "variable.attack_time"
+						}
+					]
+				},
+				"attack": {
+					"animations": [
+						"attack"
+					],
+					"blend_transition": 1,
+					"transitions": [
+						{
+							"default": "!variable.attack_time"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.charge.attack": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"blend_transition": 0.3,
+					"transitions": [
+						{
+							"attack": "query.is_charged"
+						}
+					]
+				},
+				"attack": {
+					"animations": [
+						"charged"
+					],
+					"blend_transition": 0.1,
+					"transitions": [
+						{
+							"default": "!query.is_charged"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.target.controll": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"hide"
+					],
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"show": "query.is_sheared"
+						}
+					]
+				},
+				"show": {
+					"animations": [
+						"show"
+					],
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"default": "!query.is_sheared"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.copper.golem.attack": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"blend_transition": 0.08,
+					"transitions": [
+						{
+							"attack": "variable.attack_time"
+						}
+					]
+				},
+				"attack": {
+					"animations": [
+						"attack"
+					],
+					"blend_transition": 0.15,
+					"transitions": [
+						{
+							"default": "!variable.attack_time"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.copper.shooter.default": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"default"
+					],
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"attack": "query.has_target"
+						}
+					]
+				},
+				"attack": {
+					"animations": [
+						"have_target"
+					],
+					"blend_transition": 0.3,
+					"transitions": [
+						{
+							"default": "!query.has_target"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.heavybalista.attack": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"default"
+					],
+					"blend_transition": 0.3,
+					"transitions": [
+						{
+							"attack": "query.is_charged"
+						}
+					]
+				},
+				"attack": {
+					"animations": [
+						"charged",
+						"keocangat"
+					],
+					"blend_transition": 0.05,
+					"transitions": [
+						{
+							"default": "!query.is_charged"
+						}
+					]
+				}
+			}
+		}
+	}
+}

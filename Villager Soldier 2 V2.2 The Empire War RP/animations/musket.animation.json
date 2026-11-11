@@ -1,0 +1,71 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.musket.wield": {
+			"loop": true,
+			"bones": {
+				"rightitem": {
+					"rotation": [
+						-165.2374,
+						-57.62246,
+						119.52619
+					],
+					"position": [
+						-3.6788,
+						-0.62082,
+						-2.66101
+					],
+					"scale": [
+						0.5,
+						1,
+						1
+					]
+				}
+			}
+		},
+		"animation.musket.pull": {
+			"loop": true,
+			"bones": {
+				"rightitem": {
+					"rotation": [
+						-145.2374,
+						-57.62246,
+						119.52619
+					],
+					"position": [
+						-2.68221,
+						4.80394,
+						-4.55279
+					],
+					"scale": [
+						0.5,
+						1,
+						1
+					]
+				}
+			}
+		},
+		"animation.musket.tpp": {
+			"loop": true,
+			"bones": {
+				"rightitem": {
+					"rotation": [
+						0,
+						180,
+						0
+					],
+					"position": [
+						0,
+						0,
+						-2
+					],
+					"scale": [
+						0.7,
+						1,
+						1
+					]
+				}
+			}
+		}
+	}
+}

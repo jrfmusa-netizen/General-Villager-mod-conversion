@@ -1,0 +1,51 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.villager.bow.attack": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"bow": "query.has_target"
+						}
+					]
+				},
+				"bow": {
+					"animations": [
+						"bow_and_arrow"
+					],
+					"transitions": [
+						{
+							"default": "!query.has_target"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.villager.horse.attack": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"horse": "query.is_delayed_attacking"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"horse": {
+					"animations": [
+						"melee_attack"
+					],
+					"transitions": [
+						{
+							"default": "query.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.3
+				}
+			}
+		}
+	}
+}

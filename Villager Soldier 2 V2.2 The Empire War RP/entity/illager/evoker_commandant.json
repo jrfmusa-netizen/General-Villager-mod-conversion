@@ -1,0 +1,53 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "fv:evoker_commandant",
+			"materials": {
+				"default": "evoker"
+			},
+			"textures": {
+				"default": "textures/entity/evoker/evoker_tongtulenh",
+				"cape": "textures/entity/evoker/commander_cape"
+			},
+			"geometry": {
+				"default": "geometry.evoker_hat",
+				"cape": "geometry.cape_illager"
+			},
+			"scripts": {
+				"scale": "0.9375",
+				"animate": [
+					"controller_general",
+					"controller_move",
+					"cape",
+					"controller_caperun"
+				]
+			},
+			"animations": {
+				"general": "animation.evoker.general",
+				"casting": "animation.evoker.casting",
+				"look_at_target": "animation.common.look_at_target",
+				"move": "animation.evoker.move",
+				"riding.legs": "animation.humanoid.riding.legs",
+				"celebrating": "animation.humanoid.celebrating",
+				"controller_general": "controller.animation.evoker.general",
+				"controller_move": "controller.animation.villager.move",
+				"controller_riding": "controller.animation.humanoid.riding_legs_only",
+				"cape": "animation.cape_illager.moving",
+				"caperun": "animation.cape_illager.run",
+				"controller_caperun": "controller.animation.cape.running"
+			},
+			"particle_effects": {
+				"spell": "minecraft:evoker_spell"
+			},
+			"render_controllers": [
+				"controller.render.evoker",
+				"controller.render.cape.illager"
+			],
+			"spawn_egg": {
+				"base_color": "#1C1C1C",
+				"overlay_color": "#FFF200"
+			}
+		}
+	}
+}

@@ -1,0 +1,119 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.copper_golem.walking": {
+			"loop": true,
+			"bones": {
+				"leftLeg": {
+					"rotation": [
+						"-variable.tcos0",
+						0,
+						0
+					]
+				},
+				"rightLeg": {
+					"rotation": [
+						"variable.tcos0",
+						0,
+						0
+					]
+				},
+				"leftArm": {
+					"rotation": [
+						"variable.tcos0",
+						0,
+						0
+					]
+				},
+				"rightArm": {
+					"rotation": [
+						"-variable.tcos0",
+						0,
+						0
+					]
+				}
+			}
+		},
+		"animation.copper_golem.attack": {
+			"loop": true,
+			"bones": {
+				"leftArm": {
+					"rotation": [
+						-142.5,
+						0,
+						0
+					]
+				},
+				"rightArm": {
+					"rotation": [
+						-142.5,
+						0,
+						0
+					]
+				}
+			}
+		},
+		"animation.copper_golem.stand": {
+			"loop": true,
+			"bones": {
+				"stick": {
+					"position": [
+						0,
+						-3,
+						0
+					]
+				}
+			}
+		},
+		"animation.copper_golem.cannon_aim": {
+			"loop": true,
+			"bones": {
+				"cannon": {
+					"rotation": [
+						"query.target_x_rotation",
+						0,
+						0
+					]
+				}
+			}
+		},
+		"animation.copper_golem.shoot": {
+			"loop": true,
+			"bones": {
+				"phao": {
+					"position": [
+						0,
+						0,
+						6
+					]
+				}
+			}
+		},
+		"animation.copper_golem.cannon_stay": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"position": [
+						0,
+						3,
+						10
+					]
+				},
+				"leftArm": {
+					"rotation": [
+						-85.58619,
+						17.07228,
+						-3.90399
+					]
+				},
+				"rightArm": {
+					"rotation": [
+						-86.04835,
+						-19.03771,
+						6.24605
+					]
+				}
+			}
+		}
+	}
+}

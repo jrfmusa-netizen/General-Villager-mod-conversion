@@ -1,0 +1,103 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.shooter.default": {
+			"loop": true,
+			"bones": {
+				"leftArm": {
+					"rotation": [
+						-82.5,
+						0,
+						0
+					]
+				},
+				"rightArm": {
+					"rotation": [
+						-77.31336,
+						9.76061,
+						2.18558
+					]
+				}
+			}
+		},
+		"animation.shooter.have_target": {
+			"loop": true,
+			"bones": {
+				"controll": {
+					"rotation": [
+						"query.target_x_rotation",
+						0,
+						0
+					]
+				},
+				"shoot": {
+					"rotation": [
+						"query.target_x_rotation",
+						0,
+						0
+					]
+				},
+				"body": {
+					"rotation": [
+						2.5,
+						0,
+						0
+					],
+					"position": [
+						0,
+						0,
+						-1
+					]
+				},
+				"leftLeg": {
+					"rotation": [
+						17.5,
+						0,
+						0
+					]
+				},
+				"rightLeg": {
+					"rotation": [
+						12.5,
+						0,
+						0
+					]
+				},
+				"leftArm": {
+					"rotation": [
+						-87.85952,
+						17.34551,
+						-2.35666
+					]
+				},
+				"rightArm": {
+					"rotation": [
+						-97.61435,
+						-9.91358,
+						1.31845
+					]
+				}
+			}
+		},
+		"animation.shooter.look_at_target": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"rotation": [
+						"query.target_x_rotation",
+						"query.target_y_rotation",
+						0
+					]
+				}
+			}
+		},
+		"animation.shooter.dead": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"scale": 0
+				}
+			}
+		}
+	}
+}

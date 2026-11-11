@@ -1,0 +1,275 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.heavy_balista.default": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"rotation": [
+						10,
+						0,
+						0
+					]
+				},
+				"leftLeg": {
+					"rotation": [
+						-10,
+						0,
+						0
+					]
+				},
+				"rightLeg": {
+					"rotation": [
+						-10,
+						0,
+						0
+					]
+				},
+				"rightarm": {
+					"rotation": [
+						-46.50931,
+						-11.00072,
+						-10.26078
+					]
+				},
+				"leftarm": {
+					"rotation": [
+						-48.83324,
+						14.8902,
+						9.34677
+					]
+				}
+			}
+		},
+		"animation.heavy_balista.charging": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.5,
+			"bones": {
+				"cangattrai": {
+					"rotation": {
+						"0.375": [
+							0,
+							0,
+							0
+						],
+						"0.5": [
+							-40,
+							0,
+							0
+						]
+					}
+				},
+				"body": {
+					"rotation": [
+						10,
+						0,
+						0
+					],
+					"position": [
+						0,
+						0,
+						3
+					]
+				},
+				"leftLeg": {
+					"rotation": [
+						-10,
+						0,
+						0
+					]
+				},
+				"rightLeg": {
+					"rotation": [
+						-10,
+						0,
+						0
+					]
+				},
+				"rightarm": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"0.5": [
+							-64.81092,
+							-6.79382,
+							-3.18458
+						]
+					},
+					"position": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"0.5": [
+							0,
+							-1.79597,
+							-1.3321
+						]
+					}
+				},
+				"leftarm": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"0.25": [
+							-58.09682,
+							-26.11119,
+							-15.32196
+						],
+						"0.375": [
+							-55,
+							0,
+							0
+						],
+						"0.5": [
+							-22.5,
+							0,
+							0
+						]
+					}
+				}
+			}
+		},
+		"animation.heavy_balista.move": {
+			"loop": true,
+			"bones": {
+				"banh": {
+					"rotation": [
+						"query.modified_distance_moved*30",
+						0,
+						0
+					]
+				},
+				"banh2": {
+					"rotation": [
+						"query.modified_distance_moved*30",
+						0,
+						0
+					]
+				},
+				"banh3": {
+					"rotation": [
+						"query.modified_distance_moved*30",
+						0,
+						0
+					]
+				},
+				"banh4": {
+					"rotation": [
+						"query.modified_distance_moved*30",
+						0,
+						0
+					]
+				}
+			}
+		},
+		"animation.heavy_balista.scale_muiten": {
+			"loop": true,
+			"bones": {
+				"muiten": {
+					"scale": [
+						0.8,
+						0.8,
+						1
+					]
+				}
+			}
+		},
+		"animation.heavy_balista.crossbow_charged": {
+			"loop": "hold_on_last_frame",
+			"bones": {
+				"trucxoay": {
+					"rotation": [
+						-270,
+						0,
+						0
+					]
+				},
+				"cungtrai": {
+					"rotation": [
+						0,
+						-5,
+						0
+					]
+				},
+				"daytrai": {
+					"rotation": [
+						0,
+						45,
+						0
+					]
+				},
+				"cungphai": {
+					"rotation": [
+						0,
+						5,
+						0
+					]
+				},
+				"dayphai": {
+					"rotation": [
+						0,
+						-45,
+						0
+					]
+				},
+				"daykeo": {
+					"scale": [
+						1,
+						1,
+						0.2
+					]
+				},
+				"begiu": {
+					"position": [
+						0,
+						0,
+						17
+					]
+				},
+				"muiten": {
+					"position": [
+						0,
+						0,
+						17
+					]
+				},
+				"canhtrai": {
+					"rotation": [
+						0,
+						-5,
+						0
+					]
+				},
+				"canhtrai2": {
+					"rotation": [
+						0,
+						-5,
+						0
+					]
+				},
+				"canhphai": {
+					"rotation": [
+						0,
+						5,
+						0
+					]
+				},
+				"canhphai2": {
+					"rotation": [
+						0,
+						5,
+						0
+					]
+				}
+			}
+		}
+	}
+}

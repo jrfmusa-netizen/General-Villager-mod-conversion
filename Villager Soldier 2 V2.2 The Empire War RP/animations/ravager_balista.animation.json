@@ -1,0 +1,118 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.ravager_balista.charged": {
+			"loop": true,
+			"bones": {
+				"cungtrai": {
+					"rotation": [
+						0,
+						-20,
+						0
+					]
+				},
+				"canhcungtrai": {
+					"rotation": [
+						0,
+						-25,
+						0
+					]
+				},
+				"cungphai": {
+					"rotation": [
+						0,
+						20,
+						0
+					]
+				},
+				"canhcungphai": {
+					"rotation": [
+						0,
+						25,
+						0
+					]
+				},
+				"donbay": {
+					"position": [
+						0,
+						0,
+						25
+					]
+				},
+				"daytrai": {
+					"rotation": [
+						0,
+						107.5,
+						0
+					]
+				},
+				"dayphai": {
+					"rotation": [
+						0,
+						-107.5,
+						0
+					]
+				},
+				"daykeo": {
+					"scale": [
+						1,
+						1,
+						0.125
+					]
+				},
+				"trucxoay": {
+					"rotation": [
+						-180,
+						0,
+						0
+					]
+				},
+				"muiten": {
+					"position": [
+						0,
+						0,
+						25
+					]
+				}
+			},
+			"sound_effects": {
+				"0.0": {
+					"effect": "crossbow"
+				}
+			}
+		},
+		"animation.ravager_balista.moving": {
+			"loop": true,
+			"bones": {
+				"banh": {
+					"rotation": [
+						"query.modified_distance_moved*50",
+						0,
+						0
+					]
+				},
+				"banh3": {
+					"rotation": [
+						"query.modified_distance_moved*50",
+						0,
+						0
+					]
+				},
+				"banh4": {
+					"rotation": [
+						"query.modified_distance_moved*50",
+						0,
+						0
+					]
+				},
+				"banh2": {
+					"rotation": [
+						"query.modified_distance_moved*50",
+						0,
+						0
+					]
+				}
+			}
+		}
+	}
+}

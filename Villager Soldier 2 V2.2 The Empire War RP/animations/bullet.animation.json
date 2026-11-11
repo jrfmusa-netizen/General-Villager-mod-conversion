@@ -1,0 +1,18 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.item_sprite.particle": {
+			"loop": "hold_on_last_frame",
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "smoke"
+					},
+					{
+						"effect": "bullet"
+					}
+				]
+			}
+		}
+	}
+}
