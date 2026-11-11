@@ -1,0 +1,45 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:spawn_rules": {
+    "description": {
+      "identifier": "fv:pillager_raider",
+      "population_control": "monster"
+    },
+    "conditions": [
+      {
+        "minecraft:spawns_on_surface": {},
+        "minecraft:brightness_filter": {
+          "min": 0,
+          "max": 7,
+          "adjust_for_weather": false
+        },
+        "minecraft:weight": {
+          "default": 60
+        },
+        "minecraft:herd": {
+          "min_size": 4,
+          "max_size": 5,
+          "event": "raiding"
+        },
+        "minecraft:density_limit": {
+          "surface": 2
+        },
+        "minecraft:biome_filter": {
+          "test": "has_biome_tag",
+          "operator": "==",
+          "value": "monster"
+        },
+        "minecraft:player_in_village_filter": {
+          "distance": 5,
+          "village_border_tolerance": 16
+        },
+        "minecraft:delay_filter": {
+          "identifier": "fv:pillager_raider",
+          "min": 10,
+          "max": 20,
+          "spawn_chance": 20
+        }
+      }
+    ]
+  }
+}
