@@ -1,0 +1,30 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.evoker.armor": {
+			"geometry": "geometry.armor",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"part_visibility": [
+				{
+					"*": true
+				},
+				{
+					"armor5": "!(query.is_casting || query.is_celebrating)"
+				},
+				{
+					"arm1": "query.is_casting || query.is_celebrating"
+				},
+				{
+					"arm2": "query.is_casting || query.is_celebrating"
+				}
+			],
+			"textures": [
+				"texture.armor"
+			]
+		}
+	}
+}

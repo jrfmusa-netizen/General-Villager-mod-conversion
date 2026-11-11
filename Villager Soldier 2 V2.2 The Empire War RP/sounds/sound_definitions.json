@@ -1,0 +1,134 @@
+{
+	"format_version": "1.14.0",
+	"sound_definitions": {
+		"soldier_horse_idle": {
+			"__use_legacy_max_distance": true,
+			"category": "neutral",
+			"sounds": [
+				"sounds/mob/horse/idle1",
+				"sounds/mob/horse/idle2",
+				"sounds/mob/horse/idle3",
+				"sounds/mob/villager/idle1",
+				"sounds/mob/villager/idle2",
+				"sounds/mob/villager/idle3"
+			]
+		},
+		"soldier_horse_hurt": {
+			"__use_legacy_max_distance": true,
+			"category": "neutral",
+			"sounds": [
+				"sounds/mob/horse/hit1",
+				"sounds/mob/horse/hit2",
+				"sounds/mob/horse/hit3",
+				"sounds/mob/horse/hit4",
+				"sounds/mob/villager/hit1",
+				"sounds/mob/villager/hit2",
+				"sounds/mob/villager/hit3",
+				"sounds/mob/villager/hit4"
+			]
+		},
+		"soldier_horse_step": {
+			"__use_legacy_max_distance": true,
+			"category": "neutral",
+			"sounds": [
+				"sounds/mob/horse/wood1",
+				"sounds/mob/horse/wood2",
+				"sounds/mob/horse/wood3",
+				"sounds/mob/horse/wood4",
+				"sounds/mob/horse/wood5",
+				"sounds/mob/horse/wood6"
+			]
+		},
+		"villager_call_horn": {
+			"__use_legacy_max_distance": true,
+			"category": "hostile",
+			"sounds": [
+				"sounds/item/horn/call0",
+				"sounds/item/horn/call1"
+			]
+		},
+		"illager_call_horn": {
+			"__use_legacy_max_distance": true,
+			"category": "hostile",
+			"sounds": [
+				"sounds/item/horn/call5",
+				"sounds/item/horn/call6"
+			]
+		},
+		"hit.bonus": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"sounds": [
+				"sounds/hit/hit.bonus"
+			],
+			"subtitle": "bonus hit"
+		},
+		"musket.shoot": {
+			"__use_legacy_max_distance": true,
+			"category": "hostile",
+			"sounds": [
+				"sounds/musket_sound/musketshoot2"
+			]
+		},
+		"musket.locked": {
+			"__use_legacy_max_distance": true,
+			"category": "hostile",
+			"sounds": [
+				"sounds/musket_sound/musketlock"
+			]
+		},
+		"camel.illager.hurt": {
+			"__use_legacy_max_distance": true,
+			"category": "hostile",
+			"sounds": [
+				"sounds/mob/camel/hurt1",
+				"sounds/mob/camel/hurt2",
+				"sounds/mob/camel/hurt3",
+				"sounds/mob/camel/hurt4",
+				"sounds/mob/vindication_illager/hurt1",
+				"sounds/mob/vindication_illager/hurt2",
+				"sounds/mob/vindication_illager/hurt3"
+			]
+		},
+		"camel.illager.idle": {
+			"__use_legacy_max_distance": true,
+			"category": "hostile",
+			"sounds": [
+				"sounds/mob/camel/ambient1",
+				"sounds/mob/camel/ambient2",
+				"sounds/mob/camel/ambient3",
+				"sounds/mob/camel/ambient4",
+				"sounds/mob/camel/ambient5",
+				"sounds/mob/camel/ambient6",
+				"sounds/mob/camel/ambient7",
+				"sounds/mob/camel/ambient8",
+				"sounds/mob/vindication_illager/idle1",
+				"sounds/mob/vindication_illager/idle2",
+				"sounds/mob/vindication_illager/idle3",
+				"sounds/mob/vindication_illager/idle4",
+				"sounds/mob/vindication_illager/idle5"
+			]
+		},
+		"flintlock.shoot": {
+			"__use_legacy_max_distance": true,
+			"category": "hostile",
+			"sounds": [
+				"sounds/musket_sound/musketshoot"
+			]
+		},
+		"rifle.shoot": {
+			"__use_legacy_max_distance": true,
+			"category": "hostile",
+			"sounds": [
+				"sounds/win94/win94_shoot"
+			]
+		},
+		"rifle.load": {
+			"__use_legacy_max_distance": true,
+			"category": "hostile",
+			"sounds": [
+				"sounds/win94/win94_loaded"
+			]
+		}
+	}
+}

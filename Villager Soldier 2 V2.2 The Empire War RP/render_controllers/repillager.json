@@ -1,0 +1,128 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.pillager.remake": {
+			"geometry": "geometry.armor",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"array.skins[query.skin_id]"
+			],
+			"arrays": {
+				"textures": {
+					"Array.skins": [
+						"Texture.normal",
+						"Texture.captain"
+					]
+				}
+			}
+		},
+		"controller.render.pillager.elite": {
+			"geometry": "geometry.default",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"array.skins[query.variant]"
+			],
+			"arrays": {
+				"textures": {
+					"Array.skins": [
+						"Texture.default",
+						"Texture.iron",
+						"Texture.diamond"
+					]
+				}
+			}
+		},
+		"controller.render.cape.illager": {
+			"geometry": "geometry.cape",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"texture.cape"
+			]
+		},
+		"controller.render.ravager.balista": {
+			"geometry": "geometry.balista",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"texture.balista"
+			],
+			"part_visibility": [
+				{
+					"muiten": "query.is_charged"
+				}
+			],
+			"is_hurt_color": {},
+			"on_fire_color": {}
+		},
+		"controller.render.camel.illager": {
+			"geometry": "geometry.camel",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"texture.camel"
+			]
+		},
+		"controller.render.banner.illager": {
+			"geometry": "geometry.banner",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"texture.banner"
+			]
+		},
+		"controller.render.hat.illager": {
+			"geometry": "geometry.hat",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"texture.hat"
+			]
+		},
+		"controller.render.gunback": {
+			"geometry": "geometry.gunback",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"texture.gunback"
+			]
+		},
+		"controller.render.gunbeside": {
+			"geometry": "geometry.gunbeside",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"texture.gunbeside"
+			]
+		}
+	}
+}

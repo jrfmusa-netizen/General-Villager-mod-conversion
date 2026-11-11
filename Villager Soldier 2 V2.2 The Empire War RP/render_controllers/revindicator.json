@@ -1,0 +1,90 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.vindicator.armor": {
+			"geometry": "geometry.armor",
+			"part_visibility": [
+				{
+					"arm1": "query.is_angry || query.is_celebrating"
+				},
+				{
+					"arm2": "query.is_angry || query.is_celebrating"
+				},
+				{
+					"armor5": "!(query.is_angry || query.is_celebrating)"
+				}
+			],
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"array.skin[query.skin_id]"
+			],
+			"arrays": {
+				"textures": {
+					"Array.skin": [
+						"Texture.normal",
+						"Texture.captain"
+					]
+				}
+			}
+		},
+		"controller.render.vindicator.warrior": {
+			"geometry": "geometry.armor",
+			"part_visibility": [
+				{
+					"arm1": "query.is_angry || query.is_celebrating"
+				},
+				{
+					"arm2": "query.is_angry || query.is_celebrating"
+				},
+				{
+					"armor5": "!(query.is_angry || query.is_celebrating)"
+				}
+			],
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"array.skins[query.variant]"
+			],
+			"arrays": {
+				"textures": {
+					"Array.skins": [
+						"Texture.normal",
+						"Texture.tin",
+						"Texture.iron",
+						"Texture.steel",
+						"Texture.diamond"
+					]
+				}
+			}
+		},
+		"controller.render.vindicator.foxarmor": {
+			"geometry": "geometry.armor",
+			"part_visibility": [
+				{
+					"arm1": 1
+				},
+				{
+					"arm2": 1
+				},
+				{
+					"armor5": 0
+				}
+			],
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"texture.armor"
+			]
+		}
+	}
+}

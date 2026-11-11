@@ -1,0 +1,76 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.golem.bamboo": {
+			"geometry": "geometry.default",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"query.is_tamed?texture.tame:texture.default"
+			]
+		},
+		"controller.render.golem.target": {
+			"geometry": "geometry.target",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"texture.target"
+			]
+		},
+		"controller.render.heavy.balista": {
+			"geometry": "geometry.default",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"texture.default"
+			],
+			"part_visibility": [
+				{
+					"muiten": "query.is_charged"
+				}
+			],
+			"is_hurt_color": {},
+			"on_fire_color": {}
+		},
+		"controller.render.trident.boat": {
+			"arrays": {
+				"textures": {
+					"Array.biomes": [
+						"Texture.default",
+						"Texture.birch",
+						"Texture.jungle",
+						"Texture.savanna",
+						"Texture.dark",
+						"Texture.swamp",
+						"Texture.taiga"
+					]
+				}
+			},
+			"geometry": "geometry.default",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"array.biomes[query.mark_variant]"
+			],
+			"part_visibility": [
+				{
+					"muiten": "query.is_charged"
+				}
+			],
+			"is_hurt_color": {},
+			"on_fire_color": {}
+		}
+	}
+}
