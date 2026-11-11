@@ -1,0 +1,28 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "fv:long_stick"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"l": {
+				"item": "leather"
+			},
+			"s": {
+				"item": "stick"
+			}
+		},
+		"pattern": [
+			"##s",
+			"#l#",
+			"s##"
+		],
+		"result": {
+			"item": "fv:long_stick",
+			"count": 1
+		}
+	}
+}

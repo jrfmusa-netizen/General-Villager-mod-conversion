@@ -1,0 +1,31 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "fv:copper_golem"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"c": {
+				"item": "copper_block"
+			},
+			"l": {
+				"item": "lightning_rod"
+			},
+			"p": {
+				"item": "carved_pumpkin"
+			}
+		},
+		"pattern": [
+			"#l#",
+			"#p#",
+			"#c#"
+		],
+		"result": {
+			"item": "fv:copper_golem",
+			"count": 1
+		}
+	}
+}

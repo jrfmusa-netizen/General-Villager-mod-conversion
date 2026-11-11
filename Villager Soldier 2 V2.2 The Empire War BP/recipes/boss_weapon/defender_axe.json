@@ -1,0 +1,33 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "fv:defender_axe"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			" g ",
+			"bsb",
+			" e "
+		],
+		"key": {
+			"s": {
+				"item": "fv:long_stick"
+			},
+			"b": {
+				"item": "fv:defender_axe_blade"
+			},
+			"e": {
+				"item": "fv:enchanted_steel_ingot"
+			},
+			"g": {
+				"item": "fv:enchanted_gold_ingot"
+			}
+		},
+		"result": {
+			"item": "fv:defender_battle_axe"
+		}
+	}
+}

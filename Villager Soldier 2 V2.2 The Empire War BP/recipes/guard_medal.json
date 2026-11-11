@@ -1,0 +1,28 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "fv:guard_medal"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"g": {
+				"item": "gold_ingot"
+			},
+			"s": {
+				"item": "fv:enchanted_steel_ingot"
+			}
+		},
+		"pattern": [
+			" s ",
+			"sgs",
+			" s "
+		],
+		"result": {
+			"item": "fv:guard_medal",
+			"count": 1
+		}
+	}
+}

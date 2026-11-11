@@ -1,0 +1,14 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_furnace": {
+		"description": {
+			"identifier": "fv:bronze_ingot"
+		},
+		"tags": [
+			"furnace",
+			"blast_furnace"
+		],
+		"input": "fv:raw_bronze",
+		"output": "fv:bronze_ingot"
+	}
+}

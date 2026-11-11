@@ -1,0 +1,28 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "fv:copper_spear"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"##p",
+			"#p#",
+			"s##"
+		],
+		"key": {
+			"p": {
+				"item": "copper_ingot"
+			},
+			"s": {
+				"item": "fv:long_stick"
+			}
+		},
+		"result": {
+			"item": "fv:copper_spear",
+			"count": 1
+		}
+	}
+}

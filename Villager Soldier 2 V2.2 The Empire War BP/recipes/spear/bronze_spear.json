@@ -1,0 +1,28 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "fv:bronze_spear"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"##p",
+			"#p#",
+			"s##"
+		],
+		"key": {
+			"p": {
+				"item": "fv:bronze_ingot"
+			},
+			"s": {
+				"item": "fv:long_stick"
+			}
+		},
+		"result": {
+			"item": "fv:bronze_spear",
+			"count": 1
+		}
+	}
+}

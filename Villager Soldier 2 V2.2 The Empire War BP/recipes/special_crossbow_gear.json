@@ -1,0 +1,35 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "fv:special_crossbow_gear"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "fv:defender_helmet"
+			},
+			{
+				"item": "fv:defender_chestplate"
+			},
+			{
+				"item": "fv:defender_leggings"
+			},
+			{
+				"item": "fv:defender_boots"
+			},
+			{
+				"item": "minecraft:crossbow"
+			},
+			{
+				"item": "fv:ancient_tome_of_wisdom"
+			}
+		],
+		"result": {
+			"item": "fv:special_crossbow_gear",
+			"count": 1
+		}
+	}
+}

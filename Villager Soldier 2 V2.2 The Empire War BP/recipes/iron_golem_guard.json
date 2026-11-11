@@ -1,0 +1,28 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "fv:iron_golem_guard"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"b": {
+				"item": "carved_pumpkin"
+			},
+			"i": {
+				"item": "iron_block"
+			}
+		},
+		"pattern": [
+			"#b#",
+			"#i#",
+			"#i#"
+		],
+		"result": {
+			"item": "fv:iron_golem_guard",
+			"count": 1
+		}
+	}
+}

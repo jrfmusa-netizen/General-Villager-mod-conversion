@@ -1,0 +1,31 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "fv:stonestride"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"c": {
+				"item": "cobblestone"
+			},
+			"p": {
+				"item": "planks"
+			},
+			"s": {
+				"item": "stone"
+			}
+		},
+		"pattern": [
+			"#cc",
+			"sss",
+			"ppp"
+		],
+		"result": {
+			"item": "fv:stonestride_spawn_egg",
+			"count": 1
+		}
+	}
+}

@@ -1,0 +1,28 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "fv:book_of_cleric"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"b": {
+				"item": "book"
+			},
+			"t": {
+				"item": "totem_of_undying"
+			}
+		},
+		"pattern": [
+			" b ",
+			"btb",
+			" b "
+		],
+		"result": {
+			"item": "fv:book_of_cleric",
+			"count": 1
+		}
+	}
+}

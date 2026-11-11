@@ -1,0 +1,23 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "fv:melee_horn"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "iron_ingot"
+			},
+			{
+				"item": "goat_horn"
+			}
+		],
+		"result": {
+			"item": "fv:melee_horn",
+			"count": 1
+		}
+	}
+}

@@ -1,0 +1,23 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "fv:special_defender_chestplate"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "fv:defender_chestplate"
+			},
+			{
+				"item": "fv:enchanted_emerald"
+			}
+		],
+		"result": {
+			"item": "fv:special_defender_chestplate",
+			"count": 1
+		}
+	}
+}

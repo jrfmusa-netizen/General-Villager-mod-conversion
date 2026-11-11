@@ -1,0 +1,27 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "fv:defender_collar"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			" s ",
+			"ses",
+			" s "
+		],
+		"key": {
+			"s": {
+				"item": "fv:enchanted_steel_ingot"
+			},
+			"e": {
+				"item": "fv:enchanted_emerald"
+			}
+		},
+		"result": {
+			"item": "fv:defender_collar"
+		}
+	}
+}

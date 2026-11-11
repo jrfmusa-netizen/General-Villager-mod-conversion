@@ -1,0 +1,28 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "fv:tin_sword"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"t",
+			"t",
+			"s"
+		],
+		"key": {
+			"t": {
+				"item": "fv:tin_ingot"
+			},
+			"s": {
+				"item": "stick"
+			}
+		},
+		"result": {
+			"item": "fv:tin_sword",
+			"count": 1
+		}
+	}
+}

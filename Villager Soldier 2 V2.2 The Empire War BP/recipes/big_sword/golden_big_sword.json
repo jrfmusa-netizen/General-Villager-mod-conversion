@@ -1,0 +1,28 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "fv:golden_big_sword"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"#ii",
+			"iii",
+			"si#"
+		],
+		"key": {
+			"i": {
+				"item": "gold_ingot"
+			},
+			"s": {
+				"item": "stick"
+			}
+		},
+		"result": {
+			"item": "fv:golden_big_sword",
+			"count": 1
+		}
+	}
+}

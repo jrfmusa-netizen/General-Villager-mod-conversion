@@ -1,0 +1,23 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "fv:special_horn"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "fv:enchanted_steel_ingot"
+			},
+			{
+				"item": "goat_horn"
+			}
+		],
+		"result": {
+			"item": "fv:special_horn",
+			"count": 1
+		}
+	}
+}

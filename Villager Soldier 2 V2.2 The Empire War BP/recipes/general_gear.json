@@ -1,0 +1,32 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "fv:general_gear"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "fv:special_defender_helmet"
+			},
+			{
+				"item": "fv:special_defender_chestplate"
+			},
+			{
+				"item": "fv:ancient_tome_of_wisdom"
+			},
+			{
+				"item": "fv:defender_halberd"
+			},
+			{
+				"item": "fv:guard_medal"
+			}
+		],
+		"result": {
+			"item": "fv:general_medal",
+			"count": 1
+		}
+	}
+}

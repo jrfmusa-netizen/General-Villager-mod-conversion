@@ -1,0 +1,30 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "fv:defender_sword"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"  b",
+			" c ",
+			"s "
+		],
+		"key": {
+			"s": {
+				"item": "fv:long_stick"
+			},
+			"b": {
+				"item": "fv:defender_blade"
+			},
+			"c": {
+				"item": "fv:defender_collar"
+			}
+		},
+		"result": {
+			"item": "fv:defender_sword"
+		}
+	}
+}

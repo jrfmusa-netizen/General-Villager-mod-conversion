@@ -1,0 +1,28 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "fv:steel_sword"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"s",
+			"s",
+			"t"
+		],
+		"key": {
+			"s": {
+				"item": "fv:steel_ingot"
+			},
+			"t": {
+				"item": "stick"
+			}
+		},
+		"result": {
+			"item": "fv:steel_sword",
+			"count": 1
+		}
+	}
+}

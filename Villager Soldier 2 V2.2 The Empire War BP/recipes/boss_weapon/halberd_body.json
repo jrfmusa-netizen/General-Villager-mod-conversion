@@ -1,0 +1,26 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "fv:halberd_body"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			" e",
+			"s "
+		],
+		"key": {
+			"s": {
+				"item": "fv:long_stick"
+			},
+			"e": {
+				"item": "fv:enchanted_steel_ingot"
+			}
+		},
+		"result": {
+			"item": "fv:defender_halberd_body"
+		}
+	}
+}

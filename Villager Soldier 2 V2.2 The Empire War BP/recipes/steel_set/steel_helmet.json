@@ -1,0 +1,24 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "fv:steel_helmet"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"sss",
+			"s s"
+		],
+		"key": {
+			"s": {
+				"item": "fv:steel_ingot"
+			}
+		},
+		"result": {
+			"item": "fv:steel_helmet",
+			"count": 1
+		}
+	}
+}

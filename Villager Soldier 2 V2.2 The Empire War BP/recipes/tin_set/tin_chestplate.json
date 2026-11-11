@@ -1,0 +1,25 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "fv:tin_chestplate"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"t t",
+			"ttt",
+			"ttt"
+		],
+		"key": {
+			"t": {
+				"item": "fv:tin_ingot"
+			}
+		},
+		"result": {
+			"item": "fv:tin_chestplate",
+			"count": 1
+		}
+	}
+}

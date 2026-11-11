@@ -1,0 +1,29 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "fv:swordthane_gear"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "fv:special_defender_helmet"
+			},
+			{
+				"item": "fv:special_defender_chestplate"
+			},
+			{
+				"item": "fv:ancient_tome_of_wisdom"
+			},
+			{
+				"item": "fv:defender_sword"
+			}
+		],
+		"result": {
+			"item": "fv:swordthane_gear",
+			"count": 1
+		}
+	}
+}

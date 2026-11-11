@@ -1,0 +1,25 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "fv:tin_leggings"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"ttt",
+			"t t",
+			"t t"
+		],
+		"key": {
+			"t": {
+				"item": "fv:tin_ingot"
+			}
+		},
+		"result": {
+			"item": "fv:tin_leggings",
+			"count": 1
+		}
+	}
+}

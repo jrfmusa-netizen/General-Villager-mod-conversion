@@ -1,0 +1,24 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "fv:defender_blade"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"ss",
+			"ss",
+			"ss"
+		],
+		"key": {
+			"s": {
+				"item": "fv:enchanted_steel_ingot"
+			}
+		},
+		"result": {
+			"item": "fv:defender_blade"
+		}
+	}
+}

@@ -1,0 +1,25 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "fv:defender_leggings"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"ccc",
+			"c c",
+			"c c"
+		],
+		"key": {
+			"c": {
+				"item": "fv:enchanted_steel_ingot"
+			}
+		},
+		"result": {
+			"item": "fv:defender_leggings",
+			"count": 1
+		}
+	}
+}

@@ -1,0 +1,23 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "fv:special_defender_helmet"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "fv:defender_helmet"
+			},
+			{
+				"item": "fv:enchanted_emerald"
+			}
+		],
+		"result": {
+			"item": "fv:special_defender_helmet",
+			"count": 1
+		}
+	}
+}

@@ -1,0 +1,28 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "fv:battle_axe_golden"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"iii",
+			"isi",
+			"sii"
+		],
+		"key": {
+			"i": {
+				"item": "gold_ingot"
+			},
+			"s": {
+				"item": "stick"
+			}
+		},
+		"result": {
+			"item": "fv:battle_axe_golden",
+			"count": 1
+		}
+	}
+}

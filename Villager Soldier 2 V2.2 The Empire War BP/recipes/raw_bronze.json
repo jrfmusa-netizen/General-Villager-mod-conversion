@@ -1,0 +1,25 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "fv:raw_bronze"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "raw_copper",
+				"count": 1
+			},
+			{
+				"item": "fv:tin_nugget",
+				"count": 2
+			}
+		],
+		"result": {
+			"item": "fv:raw_bronze",
+			"count": 1
+		}
+	}
+}

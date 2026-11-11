@@ -1,0 +1,40 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "fv:shooter"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"c": {
+				"item": "copper_ingot"
+			},
+			"d": {
+				"item": "dispenser"
+			},
+			"p": {
+				"item": "planks"
+			},
+			"g": {
+				"item": "fv:copper_golem"
+			},
+			"s": {
+				"item": "stone_block_slab"
+			},
+			"t": {
+				"item": "lever"
+			}
+		},
+		"pattern": [
+			"gdp",
+			"ctc",
+			"sss"
+		],
+		"result": {
+			"count": 1,
+			"item": "fv:shooter"
+		}
+	}
+}
