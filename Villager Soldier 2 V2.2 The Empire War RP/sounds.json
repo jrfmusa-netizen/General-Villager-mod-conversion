@@ -1,0 +1,1635 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"fv:villager_crossbow": {
+				"events": {
+					"ambient": "mob.villager.idle",
+					"celebrate": "mob.villager.yes",
+					"death": "mob.villager.death",
+					"hurt": "mob.villager.hit",
+					"shoot": "crossbow.shoot"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 3
+			},
+			"fv:villager_swordman": {
+				"events": {
+					"ambient": "mob.villager.idle",
+					"celebrate": "mob.villager.yes",
+					"death": "mob.villager.death",
+					"hurt": "mob.villager.hit"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 3
+			},
+			"fv:villager_gunner": {
+				"events": {
+					"ambient": "mob.villager.idle",
+					"celebrate": "mob.villager.yes",
+					"death": "mob.villager.death",
+					"hurt": "mob.villager.hit"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 3
+			},
+			"fv:villager_spear": {
+				"events": {
+					"ambient": "mob.villager.idle",
+					"celebrate": "mob.villager.yes",
+					"death": "mob.villager.death",
+					"hurt": "mob.villager.hit"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 3
+			},
+			"fv:villager_ax": {
+				"events": {
+					"ambient": "mob.villager.idle",
+					"celebrate": "mob.villager.yes",
+					"death": "mob.villager.death",
+					"hurt": "mob.villager.hit"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 3
+			},
+			"fv:villager_bow": {
+				"events": {
+					"ambient": "mob.villager.idle",
+					"celebrate": "mob.villager.yes",
+					"death": "mob.villager.death",
+					"hurt": "mob.villager.hit",
+					"shoot": "random.bow"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 3
+			},
+			"fv:pillager_raider": {
+				"events": {
+					"ambient": "mob.pillager.idle",
+					"ambient.in.raid": {
+						"pitch": [
+							0.8,
+							1.2
+						],
+						"sound": "mob.pillager.idle",
+						"volume": 3
+					},
+					"celebrate": "mob.pillager.celebrate",
+					"death": "mob.pillager.death",
+					"hurt": "mob.pillager.hurt",
+					"shoot": "crossbow.shoot",
+					"angry": {
+						"sound": "illager_call_horn",
+						"pitch": [
+							0.8,
+							1.2
+						],
+						"volume": 50
+					}
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 1
+			},
+			"fv:pillager_armored": {
+				"events": {
+					"ambient": "mob.pillager.idle",
+					"ambient.in.raid": {
+						"pitch": [
+							0.8,
+							1.2
+						],
+						"sound": "mob.pillager.idle",
+						"volume": 3
+					},
+					"celebrate": "mob.pillager.celebrate",
+					"death": "mob.pillager.death",
+					"hurt": "mob.pillager.hurt",
+					"shoot": "crossbow.shoot"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 1
+			},
+			"fv:villager_soldier_crossbow": {
+				"events": {
+					"ambient": "mob.villager.idle",
+					"celebrate": "mob.villager.yes",
+					"death": "mob.villager.death",
+					"hurt": "mob.villager.hit",
+					"shoot": "crossbow.shoot"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 3
+			},
+			"fv:shield_villager": {
+				"events": {
+					"hurt": "item.shield.block",
+					"death": "random.break"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 3
+			},
+			"fv:villager_soldier_sword": {
+				"events": {
+					"ambient": "mob.villager.idle",
+					"celebrate": "mob.villager.yes",
+					"death": "mob.villager.death",
+					"hurt": "mob.villager.hit"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 3
+			},
+			"fv:villager_soldier_gunner": {
+				"events": {
+					"ambient": "mob.villager.idle",
+					"celebrate": "mob.villager.yes",
+					"death": "mob.villager.death",
+					"hurt": "mob.villager.hit"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 3
+			},
+			"fv:villager_soldier_spear": {
+				"events": {
+					"ambient": "mob.villager.idle",
+					"celebrate": "mob.villager.yes",
+					"death": "mob.villager.death",
+					"hurt": "mob.villager.hit"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 3
+			},
+			"fv:villager_soldier_bow": {
+				"events": {
+					"ambient": "mob.villager.idle",
+					"celebrate": "mob.villager.yes",
+					"death": "mob.villager.death",
+					"hurt": "mob.villager.hit",
+					"shoot": "random.bow"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 3
+			},
+			"fv:villager_soldier_ax": {
+				"events": {
+					"ambient": "mob.villager.idle",
+					"celebrate": "mob.villager.yes",
+					"death": "mob.villager.death",
+					"hurt": "mob.villager.hit"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 3
+			},
+			"fv:iceologer": {
+				"events": {
+					"ambient": "mob.evocation_illager.ambient",
+					"ambient.in.raid": {
+						"pitch": [
+							0.8,
+							1.2
+						],
+						"sound": "mob.evocation_illager.ambient",
+						"volume": 3
+					},
+					"cast.spell": "mob.evocation_illager.cast_spell",
+					"celebrate": "mob.evocation_illager.celebrate",
+					"death": "mob.evocation_illager.death",
+					"hurt": "mob.evocation_illager.hurt",
+					"prepare.attack": "mob.evocation_illager.prepare_attack",
+					"prepare.summon": "mob.evocation_illager.prepare_summon",
+					"prepare.wololo": "mob.evocation_illager.prepare_wololo"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 1
+			},
+			"fv:bamboo_turret": {
+				"events": {
+					"ambient": "block.bamboo.place",
+					"death": "block.bamboo.break",
+					"hurt": "block.bamboo.hit",
+					"shoot": "random.bow"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 3
+			},
+			"fv:pillager_armored_melee": {
+				"events": {
+					"ambient": "mob.pillager.idle",
+					"ambient.in.raid": {
+						"pitch": [
+							0.8,
+							1.2
+						],
+						"sound": "mob.pillager.idle",
+						"volume": 3
+					},
+					"celebrate": "mob.pillager.celebrate",
+					"death": "mob.pillager.death",
+					"hurt": "mob.pillager.hurt"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 1
+			},
+			"fv:shield_illager": {
+				"events": {
+					"hurt": "item.shield.block",
+					"death": "random.break"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 3
+			},
+			"fv:villager_soldier_captain": {
+				"events": {
+					"ambient": "soldier_horse_idle",
+					"celebrate": "mob.villager.yes",
+					"death": "mob.horse.death",
+					"hurt": "soldier_horse_hurt",
+					"step": "soldier_horse_step",
+					"angry": {
+						"sound": "villager_call_horn",
+						"pitch": [
+							0.8,
+							1.2
+						],
+						"volume": 50
+					}
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 3
+			},
+			"fv:villager_elite_soldier_sword": {
+				"events": {
+					"ambient": "mob.villager.idle",
+					"celebrate": "mob.villager.yes",
+					"death": "mob.villager.death",
+					"hurt": "mob.villager.hit"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 3
+			},
+			"fv:villager_elite_soldier_gunner": {
+				"events": {
+					"ambient": "mob.villager.idle",
+					"celebrate": "mob.villager.yes",
+					"death": "mob.villager.death",
+					"hurt": "mob.villager.hit"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 3
+			},
+			"fv:villager_elite_soldier_spear": {
+				"events": {
+					"ambient": "mob.villager.idle",
+					"celebrate": "mob.villager.yes",
+					"death": "mob.villager.death",
+					"hurt": "mob.villager.hit"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 3
+			},
+			"fv:villager_elite_soldier_crossbow": {
+				"events": {
+					"ambient": "mob.villager.idle",
+					"celebrate": "mob.villager.yes",
+					"death": "mob.villager.death",
+					"hurt": "mob.villager.hit",
+					"shoot": "crossbow.shoot"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 3
+			},
+			"fv:villager_elite_soldier_ax": {
+				"events": {
+					"ambient": "mob.villager.idle",
+					"celebrate": "mob.villager.yes",
+					"death": "mob.villager.death",
+					"hurt": "mob.villager.hit"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 3
+			},
+			"fv:villager_elite_soldier_bow": {
+				"events": {
+					"ambient": "mob.villager.idle",
+					"celebrate": "mob.villager.yes",
+					"death": "mob.villager.death",
+					"hurt": "mob.villager.hit",
+					"shoot": "random.bow"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 3
+			},
+			"fv:villager_elite_soldier_captain": {
+				"events": {
+					"ambient": "soldier_horse_idle",
+					"celebrate": "mob.villager.yes",
+					"death": "mob.horse.death",
+					"hurt": "soldier_horse_hurt",
+					"step": "soldier_horse_step",
+					"angry": {
+						"sound": "villager_call_horn",
+						"pitch": [
+							0.8,
+							1.2
+						],
+						"volume": 50
+					}
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 3
+			},
+			"fv:pillager_tanker": {
+				"events": {
+					"ambient": "mob.pillager.idle",
+					"ambient.in.raid": {
+						"pitch": [
+							0.8,
+							1.2
+						],
+						"sound": "mob.pillager.idle",
+						"volume": 3
+					},
+					"celebrate": "mob.pillager.celebrate",
+					"death": "mob.pillager.death",
+					"hurt": "mob.pillager.hurt"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 1
+			},
+			"fv:pillager_elite": {
+				"events": {
+					"ambient": "mob.pillager.idle",
+					"ambient.in.raid": {
+						"pitch": [
+							0.8,
+							1.2
+						],
+						"sound": "mob.pillager.idle",
+						"volume": 3
+					},
+					"celebrate": "mob.pillager.celebrate",
+					"death": "mob.pillager.death",
+					"hurt": "mob.pillager.hurt",
+					"shoot": "crossbow.shoot"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 1
+			},
+			"fv:villager_royal_sword": {
+				"events": {
+					"ambient": "mob.villager.idle",
+					"celebrate": "mob.villager.yes",
+					"death": "mob.villager.death",
+					"hurt": "mob.villager.hit"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 3
+			},
+			"fv:villager_royal_gunner": {
+				"events": {
+					"ambient": "mob.villager.idle",
+					"celebrate": "mob.villager.yes",
+					"death": "mob.villager.death",
+					"hurt": "mob.villager.hit"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 3
+			},
+			"fv:villager_royal_spear": {
+				"events": {
+					"ambient": "mob.villager.idle",
+					"celebrate": "mob.villager.yes",
+					"death": "mob.villager.death",
+					"hurt": "mob.villager.hit"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 3
+			},
+			"fv:villager_royal_crossbow": {
+				"events": {
+					"ambient": "mob.villager.idle",
+					"celebrate": "mob.villager.yes",
+					"death": "mob.villager.death",
+					"hurt": "mob.villager.hit",
+					"shoot": "crossbow.shoot"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 3
+			},
+			"fv:villager_royal_captain": {
+				"events": {
+					"ambient": "soldier_horse_idle",
+					"celebrate": "mob.villager.yes",
+					"death": "mob.horse.death",
+					"hurt": "soldier_horse_hurt",
+					"step": "soldier_horse_step",
+					"angry": {
+						"sound": "villager_call_horn",
+						"pitch": [
+							0.8,
+							1.2
+						],
+						"volume": 50
+					}
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 3
+			},
+			"fv:villager_royal_bow": {
+				"events": {
+					"ambient": "mob.villager.idle",
+					"celebrate": "mob.villager.yes",
+					"death": "mob.villager.death",
+					"hurt": "mob.villager.hit",
+					"shoot": "random.bow"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 3
+			},
+			"fv:villager_royal_ax": {
+				"events": {
+					"ambient": "mob.villager.idle",
+					"celebrate": "mob.villager.yes",
+					"death": "mob.villager.death",
+					"hurt": "mob.villager.hit"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 3
+			},
+			"fv:villager_diamond_captain": {
+				"events": {
+					"ambient": "soldier_horse_idle",
+					"celebrate": "mob.villager.yes",
+					"death": "mob.horse.death",
+					"hurt": "soldier_horse_hurt",
+					"step": "soldier_horse_step",
+					"angry": {
+						"sound": "villager_call_horn",
+						"pitch": [
+							0.8,
+							1.2
+						],
+						"volume": 50
+					}
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 3
+			},
+			"fv:iron_golem_tamed": {
+				"events": {
+					"ambient": "mob.irongolem.say",
+					"death": "mob.irongolem.death",
+					"hurt": "mob.irongolem.hit",
+					"irongolem.crack": "mob.irongolem.crack",
+					"irongolem.repair": "mob.irongolem.repair",
+					"step": {
+						"pitch": 1.0,
+						"sound": "mob.irongolem.walk",
+						"volume": 1.0
+					},
+					"throw": {
+						"pitch": 1.0,
+						"sound": "mob.irongolem.throw",
+						"volume": 1.0
+					}
+				},
+				"pitch": [
+					0.80,
+					1.0
+				],
+				"volume": 1.0
+			},
+			"fv:iron_golem_guard": {
+				"events": {
+					"ambient": "mob.irongolem.say",
+					"death": "mob.irongolem.death",
+					"hurt": "mob.irongolem.hit",
+					"irongolem.crack": "mob.irongolem.crack",
+					"irongolem.repair": "mob.irongolem.repair",
+					"step": {
+						"pitch": 1.0,
+						"sound": "mob.irongolem.walk",
+						"volume": 1.0
+					},
+					"throw": {
+						"pitch": 1.0,
+						"sound": "mob.irongolem.throw",
+						"volume": 1.0
+					}
+				},
+				"pitch": [
+					0.80,
+					1.0
+				],
+				"volume": 1.0
+			},
+			"fv:melon_golem": {
+				"events": {
+					"ambient": "use.wood",
+					"death": "dig.wood",
+					"hurt": "hit.wood",
+					"shoot": "mob.shulker.shoot"
+				},
+				"pitch": [
+					0.80,
+					1.0
+				],
+				"volume": 3
+			},
+			"fv:watermelon": {
+				"events": {
+					"ambient": "dig.wood"
+				},
+				"pitch": [
+					0.80,
+					1.0
+				],
+				"volume": 4
+			},
+			"fv:hoglin_illager": {
+				"events": {
+					"ambient": "mob.hoglin.ambient",
+					"angry": "mob.hoglin.angry",
+					"attack": "mob.hoglin.attack",
+					"death": "mob.hoglin.death",
+					"hurt": "mob.hoglin.hurt",
+					"retreat": "mob.hoglin.retreat",
+					"step": {
+						"pitch": 1,
+						"sound": "mob.hoglin.step",
+						"volume": 1
+					}
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 3
+			},
+			"fv:stonestride": {
+				"events": {
+					"ambient": "mob.sniffer.idle",
+					"death": "dig.stone",
+					"eat": "mob.sniffer.eat",
+					"hurt": "hit.stone",
+					"step": "land.stone"
+				},
+				"pitch": [
+					0.80,
+					1.20
+				],
+				"volume": 3.0
+			},
+			"fv:vindicator_warrior": {
+				"events": {
+					"ambient": "mob.vindicator.idle",
+					"ambient.in.raid": {
+						"pitch": [
+							0.80,
+							1.20
+						],
+						"sound": "mob.vindicator.idle",
+						"volume": 3.0
+					},
+					"celebrate": "mob.vindicator.celebrate",
+					"death": "mob.vindicator.death",
+					"hurt": "mob.vindicator.hurt"
+				},
+				"pitch": [
+					0.80,
+					1.20
+				],
+				"volume": 1.0
+			},
+			"fv:villager_cleric_master": {
+				"events": {
+					"ambient": "mob.villager.idle",
+					"celebrate": "mob.villager.yes",
+					"death": "mob.villager.death",
+					"hurt": "mob.villager.hit",
+					"prepare.wololo": "mob.villager.yes",
+					"cast.spell": "mob.evocation_illager.cast_spell"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 3
+			},
+			"fv:pillager_archer": {
+				"events": {
+					"ambient": "mob.pillager.idle",
+					"ambient.in.raid": {
+						"pitch": [
+							0.8,
+							1.2
+						],
+						"sound": "mob.pillager.idle",
+						"volume": 3
+					},
+					"celebrate": "mob.pillager.celebrate",
+					"death": "mob.pillager.death",
+					"hurt": "mob.pillager.hurt",
+					"shoot": "random.bow"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 2
+			},
+			"fv:vindicator_desert_general": {
+				"events": {
+					"ambient": "mob.vindicator.idle",
+					"ambient.in.raid": {
+						"pitch": [
+							0.80,
+							1.20
+						],
+						"sound": "mob.vindicator.idle",
+						"volume": 3.0
+					},
+					"celebrate": "mob.vindicator.celebrate",
+					"death": "mob.vindicator.death",
+					"hurt": "mob.vindicator.hurt",
+					"angry": {
+						"sound": "mob.vindicator.celebrate",
+						"pitch": [
+							0.80,
+							1.20
+						],
+						"volume": 30
+					}
+				},
+				"pitch": [
+					0.80,
+					1.20
+				],
+				"volume": 1.0
+			},
+			"fv:villager_golem_summoner": {
+				"events": {
+					"ambient": "mob.villager.idle",
+					"celebrate": "mob.villager.yes",
+					"death": "mob.villager.death",
+					"hurt": "mob.villager.hit",
+					"prepare.wololo": "mob.villager.yes",
+					"cast.spell": "mob.evocation_illager.cast_spell"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 3
+			},
+			"fv:mummy": {
+				"events": {
+					"ambient": "mob.husk.ambient",
+					"hurt": "mob.husk.hurt",
+					"death": "mob.husk.death",
+					"step": "mob.husk.step"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 3
+			},
+			"fv:mummy_villager": {
+				"events": {
+					"ambient": "mob.husk.ambient",
+					"hurt": "mob.husk.hurt",
+					"death": "mob.husk.death",
+					"step": "mob.husk.step"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 3
+			},
+			"fv:ravager_balista": {
+				"events": {
+					"ambient": "mob.ravager.ambient",
+					"ambient.in.raid": {
+						"pitch": [
+							0.80,
+							1.20
+						],
+						"sound": "mob.ravager.ambient",
+						"volume": 3.0
+					},
+					"attack.strong": "mob.ravager.bite",
+					"celebrate": "mob.ravager.celebrate",
+					"death": "mob.ravager.death",
+					"hurt": "mob.ravager.hurt",
+					"roar": "mob.ravager.roar",
+					"step": "mob.ravager.step",
+					"stun": "mob.ravager.stun",
+					"shoot": {
+						"sound": "crossbow.shoot",
+						"volume": 10,
+						"pitch": [
+							0.80,
+							1.20
+						]
+					}
+				},
+				"pitch": [
+					0.80,
+					1.20
+				],
+				"volume": 1.0
+			},
+			"fv:vindicator_desert": {
+				"events": {
+					"ambient": "mob.vindicator.idle",
+					"ambient.in.raid": {
+						"pitch": [
+							0.80,
+							1.20
+						],
+						"sound": "mob.vindicator.idle",
+						"volume": 3.0
+					},
+					"celebrate": "mob.vindicator.celebrate",
+					"death": "mob.vindicator.death",
+					"hurt": "mob.vindicator.hurt"
+				},
+				"pitch": [
+					0.80,
+					1.20
+				],
+				"volume": 1.0
+			},
+			"fv:vindicator_desert_captain": {
+				"events": {
+					"ambient": "camel.illager.idle",
+					"ambient.in.raid": {
+						"pitch": [
+							0.80,
+							1.20
+						],
+						"sound": "mob.vindicator.idle",
+						"volume": 3.0
+					},
+					"celebrate": "mob.vindicator.celebrate",
+					"death": "mob.camel.death",
+					"hurt": "camel.illager.hurt",
+					"angry": {
+						"sound": "illager_call_horn",
+						"pitch": [
+							0.8,
+							1.2
+						],
+						"volume": 50
+					}
+				},
+				"pitch": [
+					0.80,
+					1.20
+				],
+				"volume": 2.0
+			},
+			"fv:pillager_savanna": {
+				"events": {
+					"ambient": "mob.pillager.idle",
+					"ambient.in.raid": {
+						"pitch": [
+							0.8,
+							1.2
+						],
+						"sound": "mob.pillager.idle",
+						"volume": 3
+					},
+					"celebrate": "mob.pillager.celebrate",
+					"death": "mob.pillager.death",
+					"hurt": "mob.pillager.hurt",
+					"shoot": {
+						"sound": "musket.shoot",
+						"pitch": [
+							0.8,
+							1.2
+						],
+						"volume": 500
+					}
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 1
+			},
+			"fv:pillager_savanna_captain": {
+				"events": {
+					"ambient": "mob.pillager.idle",
+					"ambient.in.raid": {
+						"pitch": [
+							0.8,
+							1.2
+						],
+						"sound": "mob.pillager.idle",
+						"volume": 3
+					},
+					"celebrate": "mob.pillager.celebrate",
+					"death": "mob.pillager.death",
+					"hurt": "mob.pillager.hurt",
+					"shoot": {
+						"sound": "flintlock.shoot",
+						"pitch": [
+							0.8,
+							1.2
+						],
+						"volume": 500
+					},
+					"angry": {
+						"sound": "illager_call_horn",
+						"pitch": [
+							0.80,
+							1.20
+						],
+						"volume": 30
+					}
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 1
+			},
+			"fv:pillager_pirate_captain": {
+				"events": {
+					"ambient": "mob.pillager.idle",
+					"ambient.in.raid": {
+						"pitch": [
+							0.8,
+							1.2
+						],
+						"sound": "mob.pillager.idle",
+						"volume": 3
+					},
+					"celebrate": "mob.pillager.celebrate",
+					"death": "mob.pillager.death",
+					"hurt": "mob.pillager.hurt",
+					"shoot": {
+						"sound": "flintlock.shoot",
+						"pitch": [
+							0.8,
+							1.2
+						],
+						"volume": 500
+					},
+					"angry": {
+						"sound": "mob.pillager.celebrate",
+						"pitch": [
+							0.80,
+							1.20
+						],
+						"volume": 30
+					}
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 1
+			},
+			"fv:pillager_pirate": {
+				"events": {
+					"ambient": "mob.pillager.idle",
+					"ambient.in.raid": {
+						"pitch": [
+							0.8,
+							1.2
+						],
+						"sound": "mob.pillager.idle",
+						"volume": 3
+					},
+					"celebrate": "mob.pillager.celebrate",
+					"death": "mob.pillager.death",
+					"hurt": "mob.pillager.hurt",
+					"shoot": {
+						"sound": "musket.shoot",
+						"pitch": [
+							0.8,
+							1.2
+						],
+						"volume": 500
+					}
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 1
+			},
+			"fv:pillager_evil_cowboy": {
+				"events": {
+					"ambient": "mob.pillager.idle",
+					"ambient.in.raid": {
+						"pitch": [
+							0.8,
+							1.2
+						],
+						"sound": "mob.pillager.idle",
+						"volume": 3
+					},
+					"celebrate": "mob.pillager.celebrate",
+					"death": "mob.pillager.death",
+					"hurt": "mob.pillager.hurt",
+					"angry": {
+						"sound": "mob.pillager.celebrate",
+						"pitch": [
+							0.80,
+							1.20
+						],
+						"volume": 30
+					}
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 1
+			},
+			"fv:vindicator_taiga": {
+				"events": {
+					"ambient": "mob.vindicator.idle",
+					"ambient.in.raid": {
+						"pitch": [
+							0.80,
+							1.20
+						],
+						"sound": "mob.vindicator.idle",
+						"volume": 3.0
+					},
+					"celebrate": "mob.vindicator.celebrate",
+					"death": "mob.vindicator.death",
+					"hurt": "mob.vindicator.hurt"
+				},
+				"pitch": [
+					0.80,
+					1.20
+				],
+				"volume": 1.0
+			},
+			"fv:vindicator_taiga_general": {
+				"events": {
+					"ambient": "mob.vindicator.idle",
+					"ambient.in.raid": {
+						"pitch": [
+							0.80,
+							1.20
+						],
+						"sound": "mob.vindicator.idle",
+						"volume": 3.0
+					},
+					"celebrate": "mob.vindicator.celebrate",
+					"death": "mob.vindicator.death",
+					"hurt": "mob.vindicator.hurt",
+					"angry": "mob.vindicator.celebrate"
+				},
+				"pitch": [
+					0.80,
+					1.20
+				],
+				"volume": 1.0
+			},
+			"fv:thunderboom_balista": {
+				"events": {
+					"ambient": "land.wood",
+					"hurt": "dig.wood",
+					"death": "fall.wood",
+					"shoot": "crossbow.shoot"
+				},
+				"pitch": [
+					0.80,
+					1.20
+				],
+				"volume": 20
+			},
+			"fv:villager_guard_sword": {
+				"events": {
+					"ambient": "mob.villager.idle",
+					"celebrate": "mob.villager.yes",
+					"death": "mob.villager.death",
+					"hurt": "mob.villager.hit"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 3
+			},
+			"fv:villager_guard_axe": {
+				"events": {
+					"ambient": "mob.villager.idle",
+					"celebrate": "mob.villager.yes",
+					"death": "mob.villager.death",
+					"hurt": "mob.villager.hit"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 3
+			},
+			"fv:villager_guard_spear": {
+				"events": {
+					"ambient": "mob.villager.idle",
+					"celebrate": "mob.villager.yes",
+					"death": "mob.villager.death",
+					"hurt": "mob.villager.hit"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 3
+			},
+			"fv:evoker_commandant": {
+				"events": {
+					"ambient": "mob.evocation_illager.ambient",
+					"ambient.in.raid": {
+						"pitch": [
+							0.8,
+							1.2
+						],
+						"sound": "mob.evocation_illager.ambient",
+						"volume": 3
+					},
+					"cast.spell": "mob.evocation_illager.cast_spell",
+					"celebrate": "mob.evocation_illager.celebrate",
+					"death": "mob.evocation_illager.death",
+					"hurt": "mob.evocation_illager.hurt",
+					"prepare.attack": "mob.evocation_illager.prepare_attack",
+					"prepare.summon": "mob.evocation_illager.prepare_summon",
+					"prepare.wololo": "mob.evocation_illager.prepare_wololo"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 20
+			},
+			"fv:evoker_taiga": {
+				"events": {
+					"ambient": "mob.evocation_illager.ambient",
+					"ambient.in.raid": {
+						"pitch": [
+							0.8,
+							1.2
+						],
+						"sound": "mob.evocation_illager.ambient",
+						"volume": 3
+					},
+					"cast.spell": "mob.evocation_illager.cast_spell",
+					"celebrate": "mob.evocation_illager.celebrate",
+					"death": "mob.evocation_illager.death",
+					"hurt": "mob.evocation_illager.hurt",
+					"prepare.attack": "mob.evocation_illager.prepare_attack",
+					"prepare.summon": "mob.evocation_illager.prepare_summon",
+					"prepare.wololo": "mob.evocation_illager.prepare_wololo"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 20
+			},
+			"fv:wolf_illager": {
+				"events": {
+					"ambient": "mob.wolf.bark",
+					"death": "mob.wolf.death",
+					"growl": "mob.wolf.growl",
+					"hurt": "mob.wolf.hurt",
+					"pant": "mob.wolf.panting",
+					"shake": {
+						"pitch": [
+							0.80,
+							1.20
+						],
+						"sound": "mob.wolf.shake"
+					},
+					"step": {
+						"pitch": 1.0,
+						"sound": "mob.wolf.step",
+						"volume": 0.650
+					},
+					"whine": "mob.wolf.whine"
+				},
+				"pitch": [
+					0.80,
+					1.20
+				],
+				"volume": 1.0
+			},
+			"fv:illager_smith": {
+				"events": {
+					"ambient": "mob.vindicator.idle",
+					"ambient.in.raid": {
+						"pitch": [
+							0.80,
+							1.20
+						],
+						"sound": "mob.vindicator.idle",
+						"volume": 3.0
+					},
+					"celebrate": "mob.vindicator.celebrate",
+					"death": "mob.vindicator.death",
+					"hurt": "mob.vindicator.hurt"
+				},
+				"pitch": [
+					0.80,
+					1.20
+				],
+				"volume": 1.0
+			},
+			"fv:illager_golem": {
+				"events": {
+					"ambient": "mob.irongolem.say",
+					"death": "mob.irongolem.death",
+					"hurt": "mob.irongolem.hit",
+					"irongolem.crack": "mob.irongolem.crack",
+					"irongolem.repair": "mob.irongolem.repair",
+					"step": {
+						"pitch": 1.0,
+						"sound": "mob.irongolem.walk",
+						"volume": 1.0
+					},
+					"throw": {
+						"pitch": 1.0,
+						"sound": "mob.irongolem.throw",
+						"volume": 1.0
+					}
+				},
+				"pitch": [
+					0.80,
+					1.0
+				],
+				"volume": 1.0
+			},
+			"fv:illager_master_smith": {
+				"events": {
+					"ambient": "mob.evocation_illager.ambient",
+					"ambient.in.raid": {
+						"pitch": [
+							0.8,
+							1.2
+						],
+						"sound": "mob.evocation_illager.ambient",
+						"volume": 3
+					},
+					"cast.spell": "mob.evocation_illager.cast_spell",
+					"celebrate": "mob.evocation_illager.celebrate",
+					"death": "mob.evocation_illager.death",
+					"hurt": "mob.evocation_illager.hurt",
+					"prepare.attack": "mob.evocation_illager.prepare_attack",
+					"prepare.summon": "mob.evocation_illager.prepare_summon",
+					"prepare.wololo": "mob.evocation_illager.prepare_wololo"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 20
+			},
+			"fv:illager_generalissimo": {
+				"events": {
+					"ambient": "mob.pillager.idle",
+					"cast.spell": {
+						"pitch": [
+							0.8,
+							1.2
+						],
+						"sound": "raid.horn",
+						"volume": 3
+					},
+					"celebrate": "mob.pillager.celebrate",
+					"death": "mob.pillager.death",
+					"hurt": "mob.pillager.hurt"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 1
+			},
+			"fv:bamboo_watcher_golem": {
+				"events": {
+					"ambient": "block.bamboo.place",
+					"death": "block.bamboo.break",
+					"hurt": "block.bamboo.hit",
+					"shoot": "random.bow"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 3
+			},
+			"fv:copper_golem": {
+				"events": {
+					"ambient": "dig.copper",
+					"death": "dig.copper",
+					"hurt": "hit.copper",
+					"irongolem.crack": "mob.irongolem.crack",
+					"irongolem.repair": "mob.irongolem.repair",
+					"step": {
+						"pitch": [
+							0.80,
+							1.0
+						],
+						"sound": "dig.copper",
+						"volume": 2
+					},
+					"throw": {
+						"pitch": 1.0,
+						"sound": "mob.irongolem.throw",
+						"volume": 1.0
+					}
+				},
+				"pitch": [
+					0.80,
+					1.0
+				],
+				"volume": 2
+			},
+			"fv:shooter": {
+				"events": {
+					"ambient": "dig.copper",
+					"death": "dig.copper",
+					"hurt": "hit.copper",
+					"irongolem.crack": "mob.irongolem.crack",
+					"irongolem.repair": "mob.irongolem.repair",
+					"step": {
+						"pitch": 1.0,
+						"sound": "dig.copper",
+						"volume": 1.0
+					},
+					"throw": {
+						"pitch": 1.0,
+						"sound": "mob.irongolem.throw",
+						"volume": 1.0
+					},
+					"shoot": "random.pop"
+				},
+				"pitch": [
+					0.80,
+					1.0
+				],
+				"volume": 1.0
+			},
+			"fv:minecart_shooter": {
+				"events": {
+					"ambient": "dig.copper",
+					"death": "dig.copper",
+					"hurt": "hit.copper",
+					"irongolem.crack": "mob.irongolem.crack",
+					"irongolem.repair": "mob.irongolem.repair",
+					"step": {
+						"pitch": 1.0,
+						"sound": "minecart.base",
+						"volume": 1.0
+					},
+					"throw": {
+						"pitch": 1.0,
+						"sound": "mob.irongolem.throw",
+						"volume": 1.0
+					},
+					"shoot": "random.pop"
+				},
+				"pitch": [
+					0.80,
+					1.0
+				],
+				"volume": 1.0
+			},
+			"fv:copper_watcher": {
+				"events": {
+					"ambient": "dig.copper",
+					"death": "dig.copper",
+					"hurt": "hit.copper",
+					"irongolem.crack": "mob.irongolem.crack",
+					"irongolem.repair": "mob.irongolem.repair",
+					"step": {
+						"pitch": 1.0,
+						"sound": "dig.copper",
+						"volume": 1.0
+					},
+					"throw": {
+						"pitch": 1.0,
+						"sound": "mob.irongolem.throw",
+						"volume": 1.0
+					}
+				},
+				"pitch": [
+					0.80,
+					1.0
+				],
+				"volume": 1.0
+			},
+			"fv:vindicator_plains_general": {
+				"events": {
+					"ambient": "mob.vindicator.idle",
+					"ambient.in.raid": {
+						"pitch": [
+							0.80,
+							1.20
+						],
+						"sound": "mob.vindicator.idle",
+						"volume": 3.0
+					},
+					"celebrate": "mob.vindicator.celebrate",
+					"death": "mob.vindicator.death",
+					"hurt": "mob.vindicator.hurt",
+					"angry": {
+						"sound": "mob.vindicator.celebrate",
+						"pitch": [
+							0.80,
+							1.20
+						],
+						"volume": 30
+					}
+				},
+				"pitch": [
+					0.80,
+					1.20
+				],
+				"volume": 1.0
+			},
+			"fv:vindicator_plains": {
+				"events": {
+					"ambient": "mob.vindicator.idle",
+					"ambient.in.raid": {
+						"pitch": [
+							0.80,
+							1.20
+						],
+						"sound": "mob.vindicator.idle",
+						"volume": 3.0
+					},
+					"celebrate": "mob.vindicator.celebrate",
+					"death": "mob.vindicator.death",
+					"hurt": "mob.vindicator.hurt"
+				},
+				"pitch": [
+					0.80,
+					1.20
+				],
+				"volume": 1.0
+			},
+			"fv:villager_special_sword": {
+				"events": {
+					"ambient": "mob.villager.idle",
+					"celebrate": "mob.villager.yes",
+					"death": "mob.villager.death",
+					"hurt": "mob.villager.hit"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 4
+			},
+			"fv:villager_special_ax": {
+				"events": {
+					"ambient": "mob.villager.idle",
+					"celebrate": "mob.villager.yes",
+					"death": "mob.villager.death",
+					"hurt": "mob.villager.hit"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 4
+			},
+			"fv:villager_special_spear": {
+				"events": {
+					"ambient": "mob.villager.idle",
+					"celebrate": "mob.villager.yes",
+					"death": "mob.villager.death",
+					"hurt": "mob.villager.hit"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 4
+			},
+			"fv:villager_special_crossbow": {
+				"events": {
+					"ambient": "mob.villager.idle",
+					"celebrate": "mob.villager.yes",
+					"death": "mob.villager.death",
+					"hurt": "mob.villager.hit"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 4
+			},
+			"fv:swordthane_villager": {
+				"events": {
+					"ambient": "mob.villager.idle",
+					"celebrate": "mob.villager.yes",
+					"death": "mob.villager.death",
+					"hurt": "mob.villager.hit",
+					"angry": {
+						"sound": "mob.villager.no",
+						"pitch": [
+							0.8,
+							1.2
+						],
+						"volume": 10
+					}
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 3
+			},
+			"fv:agile_axe_villager": {
+				"events": {
+					"ambient": "mob.villager.idle",
+					"celebrate": "mob.villager.yes",
+					"death": "mob.villager.death",
+					"hurt": "mob.villager.hit",
+					"angry": {
+						"sound": "mob.villager.no",
+						"pitch": [
+							0.8,
+							1.2
+						],
+						"volume": 10
+					}
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 3
+			},
+			"fv:general_villager": {
+				"events": {
+					"ambient": "mob.villager.idle",
+					"celebrate": "mob.villager.yes",
+					"death": "mob.villager.death",
+					"hurt": "mob.villager.hit",
+					"angry": {
+						"sound": "villager_call_horn",
+						"pitch": [
+							0.7,
+							0.7
+						],
+						"volume": 60
+					}
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 3
+			},
+			"fv:heavy_balista": {
+				"events": {
+					"ambient": "dig.wood",
+					"death": "fall.wood",
+					"hurt": "hit.wood",
+					"shoot": "crossbow.shoot"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 3
+			},
+			"fv:trident_boat": {
+				"events": {
+					"ambient": "dig.wood",
+					"death": "fall.wood",
+					"hurt": "hit.wood",
+					"shoot": "item.trident.throw"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 3
+			}
+		}
+	}
+}
