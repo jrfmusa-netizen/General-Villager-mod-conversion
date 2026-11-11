@@ -1,0 +1,490 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.shooter",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [
+					0,
+					1.25,
+					0
+				]
+			},
+			"bones": [
+				{
+					"name": "shooter",
+					"pivot": [
+						-20.5,
+						13.5,
+						-1.5
+					],
+					"cubes": [
+						{
+							"origin": [
+								-23,
+								0,
+								-10
+							],
+							"size": [
+								35,
+								4,
+								19
+							],
+							"uv": [
+								0,
+								0
+							]
+						},
+						{
+							"origin": [
+								-10,
+								4,
+								-7
+							],
+							"size": [
+								20,
+								3,
+								14
+							],
+							"uv": [
+								50,
+								41
+							]
+						},
+						{
+							"origin": [
+								-10,
+								7,
+								-4
+							],
+							"size": [
+								2,
+								14,
+								8
+							],
+							"uv": [
+								54,
+								69
+							]
+						},
+						{
+							"origin": [
+								8,
+								7,
+								-4
+							],
+							"size": [
+								2,
+								14,
+								8
+							],
+							"uv": [
+								34,
+								69
+							]
+						},
+						{
+							"origin": [
+								-23,
+								4,
+								3
+							],
+							"size": [
+								12,
+								2,
+								9
+							],
+							"uv": [
+								42,
+								58
+							]
+						},
+						{
+							"origin": [
+								-23,
+								4,
+								-6
+							],
+							"size": [
+								12,
+								8,
+								9
+							],
+							"uv": [
+								0,
+								55
+							]
+						},
+						{
+							"origin": [
+								-23,
+								4,
+								12
+							],
+							"size": [
+								12,
+								2,
+								12
+							],
+							"pivot": [
+								-16,
+								4,
+								12
+							],
+							"rotation": [
+								77.5,
+								0,
+								0
+							],
+							"uv": [
+								48,
+								23
+							]
+						},
+						{
+							"origin": [
+								-22,
+								12,
+								-4
+							],
+							"size": [
+								3,
+								2,
+								5
+							],
+							"uv": [
+								0,
+								0
+							]
+						}
+					]
+				},
+				{
+					"name": "body",
+					"parent": "shooter",
+					"pivot": [
+						-17,
+						6,
+						7
+					],
+					"cubes": [
+						{
+							"origin": [
+								-21,
+								12.5,
+								3
+							],
+							"size": [
+								8,
+								5,
+								6
+							],
+							"pivot": [
+								-17,
+								15,
+								7
+							],
+							"rotation": [
+								90,
+								0,
+								0
+							],
+							"uv": [
+								0,
+								107
+							]
+						}
+					]
+				},
+				{
+					"name": "leftLeg",
+					"parent": "body",
+					"pivot": [
+						-15,
+						10,
+						7
+					],
+					"cubes": [
+						{
+							"origin": [
+								-17,
+								6,
+								5.5
+							],
+							"size": [
+								4,
+								5,
+								3
+							],
+							"uv": [
+								0,
+								120
+							]
+						}
+					]
+				},
+				{
+					"name": "rightLeg",
+					"parent": "body",
+					"pivot": [
+						-19,
+						10,
+						7
+					],
+					"cubes": [
+						{
+							"origin": [
+								-21,
+								6,
+								5.5
+							],
+							"size": [
+								4,
+								5,
+								3
+							],
+							"uv": [
+								14,
+								120
+							]
+						}
+					]
+				},
+				{
+					"name": "leftArm",
+					"parent": "body",
+					"pivot": [
+						-12,
+						15,
+						7
+					],
+					"cubes": [
+						{
+							"origin": [
+								-13,
+								7,
+								5.5
+							],
+							"size": [
+								2,
+								10,
+								3
+							],
+							"uv": [
+								34,
+								93
+							]
+						}
+					]
+				},
+				{
+					"name": "rightArm",
+					"parent": "body",
+					"pivot": [
+						-22,
+						15,
+						7
+					],
+					"cubes": [
+						{
+							"origin": [
+								-23,
+								7,
+								5.5
+							],
+							"size": [
+								2,
+								10,
+								3
+							],
+							"uv": [
+								34,
+								108
+							]
+						}
+					]
+				},
+				{
+					"name": "rightItem",
+					"parent": "rightArm",
+					"pivot": [
+						-22,
+						6,
+						-5
+					]
+				},
+				{
+					"name": "head",
+					"parent": "body",
+					"pivot": [
+						-17,
+						17,
+						7
+					],
+					"cubes": [
+						{
+							"origin": [
+								-21,
+								17,
+								3
+							],
+							"size": [
+								8,
+								5,
+								8
+							],
+							"uv": [
+								0,
+								93
+							]
+						},
+						{
+							"origin": [
+								-18,
+								16,
+								1
+							],
+							"size": [
+								2,
+								3,
+								2
+							],
+							"uv": [
+								50,
+								93
+							]
+						}
+					]
+				},
+				{
+					"name": "stick",
+					"parent": "head",
+					"pivot": [
+						-17,
+						22,
+						7
+					],
+					"cubes": [
+						{
+							"origin": [
+								-18,
+								22,
+								6
+							],
+							"size": [
+								2,
+								3,
+								2
+							],
+							"uv": [
+								50,
+								98
+							]
+						},
+						{
+							"origin": [
+								-19,
+								25,
+								5
+							],
+							"size": [
+								4,
+								3,
+								4
+							],
+							"uv": [
+								46,
+								104
+							]
+						}
+					]
+				},
+				{
+					"name": "shoot",
+					"parent": "shooter",
+					"pivot": [
+						0,
+						17,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-8,
+								9,
+								-8
+							],
+							"size": [
+								16,
+								16,
+								16
+							],
+							"uv": [
+								0,
+								23
+							]
+						}
+					]
+				},
+				{
+					"name": "buttom",
+					"parent": "shooter",
+					"pivot": [
+						-15,
+						12,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-16,
+								12,
+								-4
+							],
+							"size": [
+								3,
+								1,
+								5
+							],
+							"uv": [
+								0,
+								7
+							]
+						}
+					]
+				},
+				{
+					"name": "controll",
+					"parent": "shooter",
+					"pivot": [
+						-20.5,
+						13.5,
+						-1.5
+					],
+					"cubes": [
+						{
+							"origin": [
+								-21,
+								13,
+								-2
+							],
+							"size": [
+								1,
+								5,
+								1
+							],
+							"uv": [
+								0,
+								13
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,124 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.heavy_arrow",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 8,
+				"visible_bounds_height": 1.5,
+				"visible_bounds_offset": [
+					0,
+					0.25,
+					0
+				]
+			},
+			"bones": [
+				{
+					"name": "body",
+					"pivot": [
+						0,
+						0,
+						0.25
+					]
+				},
+				{
+					"name": "muiten",
+					"parent": "body",
+					"pivot": [
+						0,
+						0,
+						0.25
+					],
+					"cubes": [
+						{
+							"origin": [
+								-1,
+								-1,
+								18
+							],
+							"size": [
+								2,
+								2,
+								35
+							],
+							"uv": [
+								0,
+								0
+							]
+						},
+						{
+							"origin": [
+								0,
+								-4.5,
+								0
+							],
+							"size": [
+								0,
+								9,
+								18
+							],
+							"pivot": [
+								0,
+								0,
+								9
+							],
+							"rotation": [
+								0,
+								0,
+								-45
+							],
+							"uv": [
+								37,
+								38
+							]
+						},
+						{
+							"origin": [
+								0,
+								-4.5,
+								0
+							],
+							"size": [
+								0,
+								9,
+								18
+							],
+							"pivot": [
+								0,
+								0,
+								9
+							],
+							"rotation": [
+								0,
+								0,
+								45
+							],
+							"uv": [
+								0,
+								38
+							]
+						},
+						{
+							"origin": [
+								-0.5,
+								-0.5,
+								14
+							],
+							"size": [
+								1,
+								1,
+								4
+							],
+							"uv": [
+								0,
+								0
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
