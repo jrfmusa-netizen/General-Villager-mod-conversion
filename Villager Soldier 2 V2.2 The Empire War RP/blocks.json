@@ -1,0 +1,19 @@
+{
+	"format_version": [
+		1,
+		1,
+		0
+	],
+	"fv:lootbox_normal": {
+		"sound": "wood",
+		"textures": "fv_lootbox_normal"
+	},
+	"fv:tin_ore": {
+		"sound": "stone",
+		"textures": "fv_tin_ore"
+	},
+	"fv:lootbox_iron": {
+		"sound": "wood",
+		"textures": "fv_lootbox_iron"
+	}
+}
