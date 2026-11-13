@@ -1,0 +1,56 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "fv:heavy_balista",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/heavy_balista",
+				"target": "textures/entity/target"
+			},
+			"geometry": {
+				"default": "geometry.heavy_balista",
+				"target": "geometry.target"
+			},
+			"animations": {
+				"look_at_target": "animation.shooter.look_at_target",
+				"default": "animation.heavy_balista.default",
+				"show": "animation.target.pop",
+				"hide": "animation.target.default",
+				"move": "animation.heavy_balista.move",
+				"walk": "animation.iron_spear.walking",
+				"charged": "animation.heavy_balista.crossbow_charged",
+				"scale_muiten": "animation.heavy_balista.scale_muiten",
+				"charging": "controller.animation.heavybalista.attack",
+				"keocangat": "animation.heavy_balista.charging"
+			},
+			"scripts": {
+				"pre_animation": [
+					"variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;"
+				],
+				"animate": [
+					"look_at_target",
+					"move",
+					"walk",
+					"scale_muiten",
+					"charging",
+					{
+						"hide": "!query.is_sheared"
+					},
+					{
+						"show": "query.is_sheared"
+					}
+				]
+			},
+			"render_controllers": [
+				"controller.render.heavy.balista",
+				"controller.render.golem.target"
+			],
+			"spawn_egg": {
+				"texture": "heavy_balista"
+			}
+		}
+	}
+}

@@ -1,0 +1,45 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "fv:stonestride",
+			"materials": {
+				"default": "sniffer"
+			},
+			"textures": {
+				"default": "textures/entity/stonestride"
+			},
+			"geometry": {
+				"default": "geometry.stonestride"
+			},
+			"animations": {
+				"walk": "animation.stonestride.walkinng",
+				"walking": "controller.animation.sniffer.walk",
+				"sit": "animation.stonestride.sit",
+				"attack": "animation.stonestride.attack",
+				"look_at_target": "animation.common.look_at_target",
+				"attacking": "controller.animation.hoglin.attack"
+			},
+			"scripts": {
+				"pre_animation": [
+					"variable.attack_head_rot =  Math.sin(variable.attack_time * 180.0) * -37.3;",
+					"variable.moving = math.min(1.0, query.modified_move_speed * 10);"
+				],
+				"animate": [
+					"walking",
+					"look_at_target",
+					"attacking",
+					{
+						"sit": "query.is_sitting"
+					}
+				]
+			},
+			"render_controllers": [
+				"controller.render.iron_golem_tamed"
+			],
+			"spawn_egg": {
+				"texture": "stonestride"
+			}
+		}
+	}
+}

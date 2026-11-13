@@ -1,0 +1,35 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "fv:villager_bullet",
+			"materials": {
+				"default": "snowball"
+			},
+			"textures": {
+				"default": "textures/items/bullet"
+			},
+			"geometry": {
+				"default": "geometry.item_sprite"
+			},
+			"render_controllers": [
+				"controller.render.item_sprite"
+			],
+			"animations": {
+				"flying": "animation.actor.billboard",
+				"bullet": "animation.item_sprite.particle"
+			},
+			"scripts": {
+				"scale": 0.2,
+				"animate": [
+					"flying",
+					"bullet"
+				]
+			},
+			"particle_effects": {
+				"smoke": "minecraft:lava_particle",
+				"bullet": "minecraft:water_evaporation_bucket_emitter"
+			}
+		}
+	}
+}

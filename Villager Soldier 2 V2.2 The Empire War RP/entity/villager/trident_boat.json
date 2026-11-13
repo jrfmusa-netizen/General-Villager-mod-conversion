@@ -1,0 +1,68 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "fv:trident_boat",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/trident_boat",
+				"birch": "textures/entity/trident_boat/birch",
+				"jungle": "textures/entity/trident_boat/jungle",
+				"savanna": "textures/entity/trident_boat/savanna",
+				"dark": "textures/entity/trident_boat/dark",
+				"swamp": "textures/entity/trident_boat/swamp",
+				"taiga": "textures/entity/trident_boat/taiga",
+				"target": "textures/entity/target"
+			},
+			"geometry": {
+				"default": "geometry.trident_boat",
+				"target": "geometry.target"
+			},
+			"animations": {
+				"look_at_target": "animation.humanoid.look_at_target.default",
+				"default": "animation.trident_boat.default",
+				"show": "animation.target.pop",
+				"hide": "animation.target.default",
+				"charged": "animation.trident_boat.charged",
+				"scale_muiten": "animation.heavy_balista.scale_muiten",
+				"charging": "controller.animation.charge.attack",
+				"have_target": "animation.trident_boat.target_mode",
+				"change_mode": "controller.animation.copper.shooter.default",
+				"crossbow_look": "animation.trident_boat.has_target",
+				"on_water": "animation.trident_boat.on_water"
+			},
+			"scripts": {
+				"pre_animation": [
+					"variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;"
+				],
+				"animate": [
+					"look_at_target",
+					"scale_muiten",
+					"charging",
+					"change_mode",
+					{
+						"hide": "!query.is_sheared"
+					},
+					{
+						"show": "query.is_sheared"
+					},
+					{
+						"crossbow_look": "query.has_target"
+					},
+					{
+						"on_water": "!query.is_on_ground"
+					}
+				]
+			},
+			"render_controllers": [
+				"controller.render.trident.boat",
+				"controller.render.golem.target"
+			],
+			"spawn_egg": {
+				"texture": "trident_boat"
+			}
+		}
+	}
+}

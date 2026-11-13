@@ -1,0 +1,28 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "fv:barrel_boom",
+			"materials": {
+				"default": "arrow"
+			},
+			"textures": {
+				"default": "textures/items/barrel_boom"
+			},
+			"geometry": {
+				"default": "geometry.barrel_boom"
+			},
+			"animations": {
+				"on_flying": "animation.barrel_boom.flying"
+			},
+			"scripts": {
+				"animate": [
+					"on_flying"
+				]
+			},
+			"render_controllers": [
+				"controller.render.arrow"
+			]
+		}
+	}
+}

@@ -1,0 +1,34 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "fv:heavy_arrow",
+			"materials": {
+				"default": "arrow"
+			},
+			"textures": {
+				"default": "textures/entity/heavy_arrow"
+			},
+			"geometry": {
+				"default": "geometry.heavy_arrow"
+			},
+			"animations": {
+				"move": "animation.arrow.move",
+				"scale_muiten": "animation.heavy_balista.scale_muiten"
+			},
+			"scripts": {
+				"pre_animation": [
+					"variable.shake = query.shake_time - query.frame_alpha;",
+					"variable.shake_power = variable.shake > 0.0 ? -Math.sin(variable.shake * 200.0) * variable.shake : 0.0;"
+				],
+				"animate": [
+					"move",
+					"scale_muiten"
+				]
+			},
+			"render_controllers": [
+				"controller.render.arrow"
+			]
+		}
+	}
+}

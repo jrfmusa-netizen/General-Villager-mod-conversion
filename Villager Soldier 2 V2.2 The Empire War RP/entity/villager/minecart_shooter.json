@@ -1,0 +1,48 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "fv:minecart_shooter",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/copper_golem/minecart_shooter",
+				"target": "textures/entity/target"
+			},
+			"geometry": {
+				"default": "geometry.minecart_shooter",
+				"target": "geometry.target"
+			},
+			"animations": {
+				"look_at_target": "animation.shooter.look_at_target",
+				"default": "animation.minecart_shooter.default",
+				"show": "animation.target.pop",
+				"have_target": "animation.minecart_shooter.has_target",
+				"hide": "animation.target.default",
+				"change_mode": "controller.animation.copper.shooter.default",
+				"move": "animation.minecart_shooter.moving"
+			},
+			"scripts": {
+				"animate": [
+					"look_at_target",
+					"change_mode",
+					"move",
+					{
+						"hide": "!query.is_sheared"
+					},
+					{
+						"show": "query.is_sheared"
+					}
+				]
+			},
+			"render_controllers": [
+				"controller.render.iron_golem_tamed",
+				"controller.render.golem.target"
+			],
+			"spawn_egg": {
+				"texture": "minecart_shooter"
+			}
+		}
+	}
+}
